@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – ToolsAI Pro</title>
+<meta name="description" content="ToolsAI Pro se contact karo. Koi suggestion ya problem? Hum help karenge!">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://karnaray-tools.github.io/contact.html">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d14;--surface:#16161f;--card:#1c1c28;--border:#2a2a3a;--accent:#6c63ff;--accent2:#ff6584;--accent3:#43e97b;--text:#e8e8f0;--muted:#6b6b80;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 50% 40% at 80% 20%,rgba(67,233,123,0.06) 0%,transparent 60%);}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:62px;}
+.logo{font-size:20px;font-weight:800;color:white;text-decoration:none;}.logo span{color:var(--accent);}.logo em{color:var(--accent2);font-style:normal;}
+.nav-links{display:flex;gap:6px;}
+.nav-link{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;border:1px solid transparent;transition:all 0.2s;}
+.nav-link:hover,.nav-link.active{color:var(--accent);border-color:var(--accent);}
+.hero{position:relative;z-index:1;text-align:center;padding:60px 24px 40px;}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(67,233,123,0.12);border:1px solid rgba(67,233,123,0.25);color:var(--accent3);padding:6px 16px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;}
+h1{font-size:clamp(30px,5vw,52px);font-weight:800;color:white;letter-spacing:-1px;margin-bottom:14px;}
+.hero-sub{color:var(--muted);font-size:15px;max-width:420px;margin:0 auto;line-height:1.65;}
+.container{max-width:820px;margin:0 auto;padding:0 24px 80px;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.4fr;gap:20px;}
+@media(max-width:650px){.container{grid-template-columns:1fr;}}
+.info-side{}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:26px;margin-bottom:14px;}
+.info-card h3{font-size:15px;font-weight:700;color:white;margin-bottom:12px;}
+.info-item{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+.info-item:last-child{margin-bottom:0;}
+.ii-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.bg-a{background:rgba(108,99,255,0.15);}
+.bg-b{background:rgba(67,233,123,0.15);}
+.bg-c{background:rgba(255,101,132,0.15);}
+.ii-title{font-size:13px;font-weight:700;color:white;margin-bottom:3px;}
+.ii-val{font-size:12px;color:var(--muted);}
+.form-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:30px;}
+.form-card h3{font-size:18px;font-weight:800;color:white;margin-bottom:22px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:7px;}
+input[type="text"],input[type="email"],textarea,select{width:100%;background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:13px 15px;color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s;resize:vertical;}
+input:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.1);}
+.submit-btn{width:100%;padding:14px;background:var(--accent);color:white;border:none;border-radius:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all 0.2s;margin-top:4px;}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(108,99,255,0.35);}
+.success-msg{display:none;background:rgba(67,233,123,0.1);border:1px solid rgba(67,233,123,0.25);border-radius:12px;padding:16px;text-align:center;color:var(--accent3);font-weight:600;font-size:14px;margin-top:14px;}
+.success-msg.show{display:block;animation:fadeUp 0.3s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:13px;border-top:1px solid var(--border);position:relative;z-index:1;}
+footer strong{color:var(--accent);}
+footer a{color:var(--muted);text-decoration:none;margin:0 8px;}
+footer a:hover{color:var(--accent);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="toolsai-pro.html">Tools<span>AI</span><em>Pro</em></a>
+  <div class="nav-links">
+    <a class="nav-link" href="toolsai-pro.html">🏠 Home</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link active" href="contact.html">Contact</a>
+    <a class="nav-link" href="privacy.html">Privacy</a>
+    <a class="nav-link" href="terms.html">Terms</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="badge">📬 Get In Touch</div>
+  <h1>Contact Us</h1>
+  <p class="hero-sub">Koi sawaal, suggestion ya problem? Hum yahan hain — reply zaroor karenge!</p>
+</div>
+
+<div class="container">
+  <!-- LEFT -->
+  <div class="info-side">
+    <div class="info-card">
+      <h3>📬 Direct Contact</h3>
+      <div class="info-item">
+        <div class="ii-icon bg-a">📧</div>
+        <div><div class="ii-title">Email</div><div class="ii-val">karnaray.tools@gmail.com</div></div>
+      </div>
+      <div class="info-item">
+        <div class="ii-icon bg-b">⏰</div>
+        <div><div class="ii-title">Response Time</div><div class="ii-val">24-48 ghante mein reply</div></div>
+      </div>
+      <div class="info-item">
+        <div class="ii-icon bg-c">🌍</div>
+        <div><div class="ii-title">Available</div><div class="ii-val">Worldwide — Hindi & English</div></div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h3>💡 Common Topics</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--muted);">🐛 Bug report karna</div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--muted);">💡 Naya tool suggest karna</div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--muted);">🤝 Partnership / Collaboration</div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--muted);">📢 Advertising inquiry</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: FORM -->
+  <div class="form-card">
+    <h3>✉️ Message Bhejo</h3>
+    <div class="field">
+      <label>Aapka Naam</label>
+      <input type="text" id="cName" placeholder="Jaise: Rahul Kumar">
+    </div>
+    <div class="field">
+      <label>Email Address</label>
+      <input type="email" id="cEmail" placeholder="aapka@email.com">
+    </div>
+    <div class="field">
+      <label>Topic</label>
+      <select id="cTopic">
+        <option value="">— Topic chunno —</option>
+        <option>🐛 Bug Report</option>
+        <option>💡 Naya Tool Suggest</option>
+        <option>🤝 Partnership</option>
+        <option>📢 Advertising</option>
+        <option>❓ General Sawaal</option>
+        <option>🙏 Feedback</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Aapka Message</label>
+      <textarea id="cMsg" rows="5" placeholder="Apna sawaal ya suggestion yahan likho..."></textarea>
+    </div>
+    <button class="submit-btn" onclick="submitForm()">🚀 Message Bhejo</button>
+    <div class="success-msg" id="successMsg">
+      ✅ Message mil gaya! Hum 24-48 ghante mein reply karenge. Shukriya! 🙏
+    </div>
+  </div>
+</div>
+
+<footer>
+  <strong>ToolsAI Pro</strong> — Free Online Tools<br><br>
+  <a href="toolsai-pro.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms</a>
+  <a href="contact.html">Contact</a>
+</footer>
+
+<script>
+function submitForm() {
+  const name = document.getElementById('cName').value.trim();
+  const email = document.getElementById('cEmail').value.trim();
+  const msg = document.getElementById('cMsg').value.trim();
+  if (!name || !email || !msg) { alert('⚠️ Naam, email aur message fill karo!'); return; }
+  if (!email.includes('@')) { alert('⚠️ Valid email daalo!'); return; }
+  document.getElementById('successMsg').classList.add('show');
+  document.getElementById('cName').value = '';
+  document.getElementById('cEmail').value = '';
+  document.getElementById('cMsg').value = '';
+  document.getElementById('cTopic').value = '';
+}
+</script>
+</body>
+</html>
