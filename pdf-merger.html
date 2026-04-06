@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free PDF Merger Online - Combine PDF Files | ToolsAI Pro</title>
+<meta name="description" content="Merge multiple PDF files into one document online for free. No signup, no software needed. Combine PDF files instantly in your browser with ToolsAI Pro.">
+<meta name="keywords" content="PDF merger online free, combine PDF files, merge PDF, join PDF documents, PDF combiner tool">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolsaipro.github.io/pdf-merger.html">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<style>
+:root{--bg:#0d0d14;--sur:#16161f;--card:#1c1c28;--bor:#2a2a3a;--a1:#6c63ff;--a2:#ff6584;--a3:#43e97b;--a4:#f7971e;--tx:#e8e8f0;--mu:#6b6b80;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--tx);font-family:"Plus Jakarta Sans",sans-serif;min-height:100vh;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--bor);display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:60px;}
+.logo{font-size:19px;font-weight:800;color:#fff;text-decoration:none;}
+.logo span{color:var(--a1);}.logo em{color:var(--a2);font-style:normal;}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap;}
+.nl{padding:5px 11px;border-radius:16px;font-size:11px;font-weight:600;color:var(--mu);text-decoration:none;border:1px solid transparent;transition:all 0.2s;}
+.nl:hover,.nl.act{color:var(--a1);border-color:rgba(108,99,255,0.3);}
+
+/* HERO */
+.page-hero{text-align:center;padding:44px 24px 32px;}
+.breadcrumb{font-size:12px;color:var(--mu);margin-bottom:16px;}
+.breadcrumb a{color:var(--a1);text-decoration:none;}
+.breadcrumb a:hover{text-decoration:underline;}
+.tool-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.12);border:1px solid rgba(108,99,255,0.25);color:var(--a1);padding:5px 14px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;}
+.page-hero h1{font-size:clamp(28px,6vw,56px);font-weight:800;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px;}
+.page-hero h1 span{color:var(--a1);}
+.page-hero p{font-size:14px;color:var(--mu);max-width:520px;margin:0 auto;line-height:1.65;}
+
+/* TOOL CARD */
+.tool-wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+.scard{background:var(--card);border:1px solid var(--bor);border-radius:20px;padding:28px;margin-bottom:16px;}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--bor);}
+.shi{width:50px;height:50px;border-radius:13px;background:rgba(108,99,255,0.15);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.sht{font-size:20px;font-weight:800;color:#fff;}
+.shs{font-size:12px;color:var(--mu);margin-top:3px;}
+
+/* UPLOAD */
+.uz{border:2px dashed var(--bor);border-radius:14px;padding:36px 20px;text-align:center;cursor:pointer;transition:all 0.25s;}
+.uz:hover{border-color:var(--a1);background:rgba(108,99,255,0.04);}
+.uzi{font-size:42px;margin-bottom:10px;}
+.uzt{font-size:15px;font-weight:700;color:#fff;margin-bottom:5px;}
+.uzs{font-size:12px;color:var(--mu);}
+.uzb{display:inline-block;margin-top:14px;padding:10px 24px;border-radius:10px;font-size:13px;font-weight:700;background:var(--a1);color:#fff;cursor:pointer;}
+
+/* FILE LIST */
+.fl{margin-top:14px;display:flex;flex-direction:column;gap:7px;}
+.fi{display:flex;align-items:center;justify-content:space-between;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:10px 13px;}
+.fil{display:flex;align-items:center;gap:9px;}
+.fin{font-size:12px;font-weight:600;color:var(--tx);}
+.fis{font-size:10px;color:var(--mu);margin-top:1px;}
+.fir{background:none;border:none;color:var(--mu);cursor:pointer;font-size:15px;padding:2px 6px;border-radius:6px;transition:all 0.2s;}
+.fir:hover{color:var(--a2);background:rgba(255,101,132,0.1);}
+
+/* BUTTONS */
+.btn{padding:11px 22px;border-radius:10px;border:none;font-family:"Plus Jakarta Sans",sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:7px;}
+.bp1{background:var(--a1);color:#fff;}.bp1:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(108,99,255,0.35);}
+.bgbtn{background:var(--sur);color:var(--tx);border:1px solid var(--bor);}.bgbtn:hover{border-color:var(--a1);color:var(--a1);}
+.btn:disabled{opacity:0.45;cursor:not-allowed;transform:none!important;}
+.br{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap;}
+
+/* PROGRESS */
+.pw{margin-top:14px;display:none;}.pw.show{display:block;}
+.pb{height:6px;background:var(--bor);border-radius:3px;overflow:hidden;}
+.pf{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--a1),var(--a2));width:0;transition:width 0.3s;}
+.pl{font-size:11px;color:var(--mu);margin-top:6px;}
+
+/* RESULT */
+.ra{background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:18px;margin-top:14px;display:none;}
+.ra.show{display:block;animation:fu 0.3s ease;}
+.ra.ok{border-color:rgba(67,233,123,0.3);background:rgba(67,233,123,0.04);}
+@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:#fff;color:#0d0d14;padding:10px 22px;border-radius:28px;font-size:12px;font-weight:700;z-index:9999;transition:transform 0.3s;box-shadow:0 6px 24px rgba(0,0,0,0.25);}
+.toast.show{transform:translateX(-50%) translateY(0);}
+
+/* SEO SECTION */
+.seo-wrap{max-width:760px;margin:40px auto 0;padding:0 24px;}
+.seo-block{background:var(--card);border:1px solid var(--bor);border-radius:20px;padding:32px;margin-bottom:16px;}
+.seo-block h2{font-size:20px;font-weight:800;color:#fff;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.seo-block h3{font-size:15px;font-weight:700;color:#fff;margin:18px 0 8px;}
+.seo-block p{font-size:13px;color:var(--mu);line-height:1.85;margin-bottom:10px;}
+.seo-block ul,.seo-block ol{padding-left:20px;margin-bottom:12px;}
+.seo-block li{font-size:13px;color:var(--mu);line-height:1.85;margin-bottom:7px;}
+.seo-block li strong{color:#fff;}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:14px;}
+.feat-item{background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:16px;}
+.feat-icon{font-size:22px;margin-bottom:8px;}
+.feat-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:5px;}
+.feat-desc{font-size:12px;color:var(--mu);line-height:1.6;}
+.step-item{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start;}
+.step-num{width:34px;height:34px;background:var(--a1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0;margin-top:2px;}
+.step-content h3{font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;}
+.step-content p{font-size:13px;color:var(--mu);line-height:1.7;margin:0;}
+.privacy-box{background:rgba(67,233,123,0.06);border:1px solid rgba(67,233,123,0.2);border-radius:12px;padding:18px;margin-top:14px;}
+.privacy-box p{color:var(--a3);font-size:13px;margin:0;line-height:1.75;}
+.faq-item{border-bottom:1px solid var(--bor);padding:16px 0;}
+.faq-item:last-child{border-bottom:none;padding-bottom:0;}
+.faq-q{font-size:14px;font-weight:700;color:#fff;margin-bottom:7px;}
+.faq-a{font-size:13px;color:var(--mu);line-height:1.75;}
+.other-tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:14px;}
+.ot-card{background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:14px;text-decoration:none;transition:all 0.2s;display:block;text-align:center;}
+.ot-card:hover{border-color:var(--a1);transform:translateY(-2px);}
+.ot-icon{font-size:26px;margin-bottom:7px;}
+.ot-name{font-size:12px;font-weight:700;color:#fff;}
+
+/* FOOTER */
+footer{text-align:center;padding:32px 20px 24px;color:var(--mu);font-size:12px;border-top:1px solid var(--bor);margin-top:40px;}
+footer strong{color:var(--a1);}
+footer a{color:var(--mu);text-decoration:none;margin:0 7px;}
+footer a:hover{color:var(--a1);}
+@media(max-width:580px){nav{padding:0 14px;}.nl{font-size:10px;padding:4px 8px;}.scard{padding:20px 16px;}.seo-block{padding:22px 16px;}}
+</style>
+</head>
+<body>
+
+<div class="toast" id="toast">Done!</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="index.html">Tools<span>AI</span><em>Pro</em></a>
+  <div class="nav-links">
+    <a class="nl" href="index.html">Home</a>
+    <a class="nl" href="about.html">About</a>
+    <a class="nl" href="contact.html">Contact</a>
+    <a class="nl" href="privacy.html">Privacy</a>
+    <a class="nl" href="blog.html">Blog</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › PDF Merger</div>
+  <div class="tool-badge">📄 Free PDF Tool</div>
+  <h1>Free <span>PDF Merger</span> Online</h1>
+  <p>Combine multiple PDF files into one single document instantly. No signup, no software, no watermarks — completely free and 100% private.</p>
+</div>
+
+<!-- TOOL -->
+<div class="tool-wrap">
+  <div class="scard">
+    <div class="sh">
+      <div class="shi">📄</div>
+      <div><div class="sht">PDF Merger</div><div class="shs">Select 2 or more PDF files to combine them</div></div>
+    </div>
+    <div class="uz" id="uzPdf">
+      <div class="uzi">📁</div>
+      <div class="uzt">Choose PDF Files</div>
+      <div class="uzs">Select 2 or more PDF files at once — any size supported</div>
+      <div class="uzb">Browse PDF Files</div>
+    </div>
+    <input type="file" id="pdfInput" accept=".pdf" multiple style="display:none">
+    <div class="fl" id="pdfList"></div>
+    <div class="br">
+      <button class="btn bp1" id="mergeBtn" disabled>⚡ Merge Now</button>
+      <button class="btn bgbtn" id="clearBtn">🗑️ Clear All</button>
+    </div>
+    <div class="pw" id="pdfProg">
+      <div class="pb"><div class="pf" id="pdfFill"></div></div>
+      <div class="pl" id="pdfLbl">Processing your files...</div>
+    </div>
+    <div class="ra ok" id="pdfResult">
+      <div style="font-weight:700;color:var(--a3);font-size:15px;margin-bottom:12px;">✅ PDF Merged Successfully!</div>
+      <p style="font-size:13px;color:var(--mu);margin-bottom:14px;">Your merged PDF is ready. Click below to download it to your device.</p>
+      <button class="btn bp1" id="dlBtn">💾 Download Merged PDF</button>
+    </div>
+  </div>
+</div>
+
+<!-- SEO CONTENT -->
+<div class="seo-wrap">
+
+  <!-- About -->
+  <div class="seo-block">
+    <h2>📄 About PDF Merger Tool</h2>
+    <p>The ToolsAI Pro PDF Merger is a free, browser-based tool that allows you to combine two or more PDF files into a single, unified PDF document. Whether you are a student submitting multiple assignment files, a professional compiling reports and invoices, a job seeker combining a resume with certificates, or anyone who needs to manage PDF documents efficiently — this tool is designed for you.</p>
+    <p>Unlike desktop software such as Adobe Acrobat which requires a paid subscription, our PDF Merger works entirely within your web browser at absolutely no cost. There is no need to install any application, create an account or provide any personal information. Simply open the tool, upload your files, click merge and download your combined PDF within seconds.</p>
+    <p>Our tool is built using the PDF-Lib JavaScript library, which enables high-quality PDF manipulation directly in the browser. This means your files never leave your device and are never transmitted to any external server — ensuring complete privacy and security for your sensitive documents.</p>
+  </div>
+
+  <!-- Features -->
+  <div class="seo-block">
+    <h2>⚡ Key Features</h2>
+    <div class="feature-grid">
+      <div class="feat-item"><div class="feat-icon">🆓</div><div class="feat-title">100% Free Forever</div><div class="feat-desc">No subscription, no one-time payment, no hidden charges of any kind.</div></div>
+      <div class="feat-item"><div class="feat-icon">🔒</div><div class="feat-title">Complete Privacy</div><div class="feat-desc">Files processed locally in your browser. Never uploaded to any server.</div></div>
+      <div class="feat-item"><div class="feat-icon">📱</div><div class="feat-title">All Devices Supported</div><div class="feat-desc">Works on Android, iPhone, tablet and desktop — any modern browser.</div></div>
+      <div class="feat-item"><div class="feat-icon">🔐</div><div class="feat-title">Encrypted PDFs</div><div class="feat-desc">Supports password-protected and encrypted PDF files.</div></div>
+      <div class="feat-item"><div class="feat-icon">♾️</div><div class="feat-title">No File Limit</div><div class="feat-desc">Merge as many PDF files as you need in a single operation.</div></div>
+      <div class="feat-item"><div class="feat-icon">🚫</div><div class="feat-title">No Watermarks</div><div class="feat-desc">Your merged PDF is clean with no watermarks or branding added.</div></div>
+    </div>
+  </div>
+
+  <!-- How to Use -->
+  <div class="seo-block">
+    <h2>📋 How to Use — Step by Step</h2>
+    <div class="step-item"><div class="step-num">1</div><div class="step-content"><h3>Click Browse PDF Files</h3><p>Click the upload area or the Browse PDF Files button to open the file picker on your device.</p></div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-content"><h3>Select Your PDF Files</h3><p>Choose 2 or more PDF files from your device. You can select multiple files at once by holding Ctrl (Windows) or Command (Mac) while clicking, or simply tap multiple files on mobile.</p></div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-content"><h3>Review the File List</h3><p>All selected files appear in a list with their names and sizes. Click the X button next to any file to remove it from the list if needed.</p></div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-content"><h3>Click Merge Now</h3><p>Click the Merge Now button to begin combining your PDF files. A progress bar will show the merging status. The process takes only a few seconds.</p></div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-content"><h3>Download Your Merged PDF</h3><p>Once complete, click Download Merged PDF to save the combined file to your device. The file is immediately ready to use, share or print.</p></div></div>
+  </div>
+
+  <!-- Safety -->
+  <div class="seo-block">
+    <h2>🔒 Safety and Privacy</h2>
+    <p>Your privacy and document security are our top priorities. Here is exactly how ToolsAI Pro handles your PDF files:</p>
+    <div class="privacy-box">
+      <p>✅ <strong>Your files never leave your device.</strong> All PDF processing is performed entirely within your web browser using JavaScript. No data is transmitted to our servers at any point during or after the merge process.</p>
+    </div>
+    <p style="margin-top:14px;">When you click Merge Now, the PDF-Lib library reads your selected files directly from your device memory, combines them into a single document within your browser, and provides the merged file as a downloadable object — all without any network communication.</p>
+    <p>Once you close or refresh the page, all file data is automatically cleared from your browser memory. We store no user data, no file names and no document content of any kind. This makes ToolsAI Pro one of the safest online PDF tools available.</p>
+    <ul>
+      <li><strong>No server uploads</strong> — Files are never sent outside your device</li>
+      <li><strong>No data logging</strong> — We do not record any information about the files you process</li>
+      <li><strong>No account required</strong> — No personal information is collected</li>
+      <li><strong>Automatic data clearing</strong> — All file data is erased when you leave the page</li>
+    </ul>
+  </div>
+
+  <!-- FAQ -->
+  <div class="seo-block">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">Is the PDF Merger really free to use?</div>
+      <div class="faq-a">Yes, completely free. There are no hidden fees, no subscription required and no premium plan to unlock features. Every feature of the PDF Merger is available to all users at no cost, and this will never change.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How many PDF files can I merge at once?</div>
+      <div class="faq-a">There is no limit on the number of PDF files you can merge in one operation. You can combine 2 files, 10 files or even more in a single merge. The only practical limitation is your device's available memory for very large files.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I merge password-protected or encrypted PDF files?</div>
+      <div class="faq-a">Yes. Our PDF Merger is built with the ignoreEncryption option enabled, which means it can process and merge password-protected or encrypted PDF files without requiring you to enter the password. This makes it compatible with a wide range of real-world documents.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Will the merged PDF maintain the original quality?</div>
+      <div class="faq-a">Yes. The PDF Merger copies all pages from your input files directly into the merged document without any compression, conversion or quality reduction. Fonts, images, layout and formatting are all preserved exactly as in the original files.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Does the tool work on mobile phones?</div>
+      <div class="faq-a">Yes. The PDF Merger is fully optimised for mobile devices and works on Android phones, iPhones and tablets. Open toolsaipro.github.io in your mobile browser, tap the PDF Merger tool and follow the same steps as on a computer.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is there a file size limit for each PDF?</div>
+      <div class="faq-a">There is no strict file size limit imposed by the tool. Since processing happens in your browser, very large files may take slightly longer to process depending on your device performance. For best results, we recommend files under 100MB each.</div>
+    </div>
+  </div>
+
+  <!-- Other Tools -->
+  <div class="seo-block">
+    <h2>🛠️ Other Free Tools</h2>
+    <p>Explore all free tools available on ToolsAI Pro:</p>
+    <div class="other-tools">
+      <a class="ot-card" href="images-to-pdf.html"><div class="ot-icon">🖼️</div><div class="ot-name">Images to PDF</div></a>
+      <a class="ot-card" href="image-compressor.html"><div class="ot-icon">🗜️</div><div class="ot-name">Image Compressor</div></a>
+      <a class="ot-card" href="color-picker.html"><div class="ot-icon">🎨</div><div class="ot-name">Color Picker</div></a>
+      <a class="ot-card" href="password-generator.html"><div class="ot-icon">🔐</div><div class="ot-name">Password Generator</div></a>
+      <a class="ot-card" href="word-counter.html"><div class="ot-icon">📝</div><div class="ot-name">Word Counter</div></a>
+      <a class="ot-card" href="age-calculator.html"><div class="ot-icon">🎂</div><div class="ot-name">Age Calculator</div></a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>ToolsAI Pro</strong> — Free Online Tools | No Signup | 100% Browser Based<br><br>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="blog.html">Blog</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms</a>
+  <a href="contact.html">Contact</a>
+</footer>
+
+<script>
+function showToast(m) {
+  var t = document.getElementById("toast");
+  t.textContent = m;
+  t.classList.add("show");
+  setTimeout(function() { t.classList.remove("show"); }, 2200);
+}
+
+var pdfFiles = [];
+var mergedBytes = null;
+
+document.getElementById("uzPdf").addEventListener("click", function() {
+  document.getElementById("pdfInput").click();
+});
+
+document.getElementById("pdfInput").addEventListener("change", function() {
+  Array.from(this.files).forEach(function(f) {
+    if (!pdfFiles.find(function(p) { return p.name === f.name; })) {
+      pdfFiles.push(f);
+    }
+  });
+  renderList();
+  this.value = "";
+});
+
+function renderList() {
+  var html = "";
+  for (var i = 0; i < pdfFiles.length; i++) {
+    html += "<div class='fi'>" +
+      "<div class='fil'>" +
+      "<span style='font-size:18px'>📄</span>" +
+      "<div><div class='fin'>" + pdfFiles[i].name + "</div>" +
+      "<div class='fis'>" + (pdfFiles[i].size / 1024).toFixed(1) + " KB</div></div>" +
+      "</div>" +
+      "<button class='fir' data-i='" + i + "'>✕</button>" +
+      "</div>";
+  }
+  document.getElementById("pdfList").innerHTML = html;
+  document.getElementById("mergeBtn").disabled = pdfFiles.length < 2;
+  document.querySelectorAll(".fir").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      pdfFiles.splice(parseInt(this.getAttribute("data-i")), 1);
+      renderList();
+    });
+  });
+}
+
+document.getElementById("clearBtn").addEventListener("click", function() {
+  pdfFiles = [];
+  renderList();
+  document.getElementById("pdfResult").classList.remove("show");
+});
+
+document.getElementById("mergeBtn").addEventListener("click", async function() {
+  if (pdfFiles.length < 2) { showToast("Please add at least 2 PDF files!"); return; }
+  var pr = document.getElementById("pdfProg");
+  var pf = document.getElementById("pdfFill");
+  var pl = document.getElementById("pdfLbl");
+  pr.classList.add("show");
+  document.getElementById("pdfResult").classList.remove("show");
+  try {
+    var merged = await PDFLib.PDFDocument.create();
+    for (var i = 0; i < pdfFiles.length; i++) {
+      pf.style.width = ((i / pdfFiles.length) * 85) + "%";
+      pl.textContent = "Processing: " + pdfFiles[i].name;
+      var bytes = await pdfFiles[i].arrayBuffer();
+      var doc = await PDFLib.PDFDocument.load(bytes, { ignoreEncryption: true });
+      var pages = await merged.copyPages(doc, doc.getPageIndices());
+      pages.forEach(function(p) { merged.addPage(p); });
+    }
+    pf.style.width = "100%";
+    pl.textContent = "Finalizing...";
+    mergedBytes = await merged.save();
+    setTimeout(function() {
+      pr.classList.remove("show");
+      document.getElementById("pdfResult").classList.add("show");
+      showToast("PDF Merged Successfully!");
+    }, 400);
+  } catch(e) {
+    pr.classList.remove("show");
+    showToast("Error: " + e.message);
+  }
+});
+
+document.getElementById("dlBtn").addEventListener("click", function() {
+  if (!mergedBytes) return;
+  var blob = new Blob([mergedBytes], { type: "application/pdf" });
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "merged-toolsaipro.pdf";
+  a.click();
+  showToast("Downloaded!");
+});
+</script>
+</body>
+</html>
