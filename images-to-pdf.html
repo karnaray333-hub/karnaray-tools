@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Images to PDF Converter Online - JPG PNG to PDF | ToolsAI Pro</title>
+<meta name="description" content="Convert multiple JPG, PNG and WebP images into a single PDF document online for free. No signup, no software needed. Fast and secure image to PDF conversion.">
+<meta name="keywords" content="images to PDF online free, JPG to PDF, PNG to PDF, convert images to PDF, photo to PDF, image PDF converter">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolsaipro.github.io/images-to-pdf.html">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<style>
+:root{--bg:#0d0d14;--sur:#16161f;--card:#1c1c28;--bor:#2a2a3a;--a1:#6c63ff;--a2:#ff6584;--a3:#43e97b;--a4:#f7971e;--a7:#a855f7;--tx:#e8e8f0;--mu:#6b6b80;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--tx);font-family:"Plus Jakarta Sans",sans-serif;min-height:100vh;}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--bor);display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:60px;}
+.logo{font-size:19px;font-weight:800;color:#fff;text-decoration:none;}
+.logo span{color:var(--a1);}.logo em{color:var(--a2);font-style:normal;}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap;}
+.nl{padding:5px 11px;border-radius:16px;font-size:11px;font-weight:600;color:var(--mu);text-decoration:none;border:1px solid transparent;transition:all 0.2s;}
+.nl:hover,.nl.act{color:var(--a1);border-color:rgba(108,99,255,0.3);}
+.page-hero{text-align:center;padding:44px 24px 32px;}
+.breadcrumb{font-size:12px;color:var(--mu);margin-bottom:16px;}
+.breadcrumb a{color:var(--a1);text-decoration:none;}
+.tool-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(168,85,247,0.12);border:1px solid rgba(168,85,247,0.25);color:var(--a7);padding:5px 14px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;}
+.page-hero h1{font-size:clamp(28px,6vw,56px);font-weight:800;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px;}
+.page-hero h1 span{color:var(--a7);}
+.page-hero p{font-size:14px;color:var(--mu);max-width:520px;margin:0 auto;line-height:1.65;}
+.tool-wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+.scard{background:var(--card);border:1px solid var(--bor);border-radius:20px;padding:28px;margin-bottom:16px;}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--bor);}
+.shi{width:50px;height:50px;border-radius:13px;background:rgba(168,85,247,0.15);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.sht{font-size:20px;font-weight:800;color:#fff;}
+.shs{font-size:12px;color:var(--mu);margin-top:3px;}
+.uz{border:2px dashed var(--bor);border-radius:14px;padding:36px 20px;text-align:center;cursor:pointer;transition:all 0.25s;}
+.uz:hover{border-color:var(--a7);background:rgba(168,85,247,0.04);}
+.uzi{font-size:42px;margin-bottom:10px;}
+.uzt{font-size:15px;font-weight:700;color:#fff;margin-bottom:5px;}
+.uzs{font-size:12px;color:var(--mu);}
+.uzb{display:inline-block;margin-top:14px;padding:10px 24px;border-radius:10px;font-size:13px;font-weight:700;background:var(--a7);color:#fff;cursor:pointer;}
+.thumb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:8px;margin-top:14px;}
+.thumb{position:relative;border-radius:9px;overflow:hidden;aspect-ratio:1;background:var(--sur);border:1px solid var(--bor);}
+.thumb img{width:100%;height:100%;object-fit:cover;}
+.thumb-num{position:absolute;top:4px;left:4px;background:var(--a7);color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;}
+.thumb-rm{position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.7);border:none;color:#fff;width:20px;height:20px;border-radius:50%;cursor:pointer;font-size:10px;display:flex;align-items:center;justify-content:center;}
+.thumb-rm:hover{background:var(--a2);}
+.btn{padding:11px 22px;border-radius:10px;border:none;font-family:"Plus Jakarta Sans",sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:7px;}
+.bp7{background:var(--a7);color:#fff;}.bp7:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(168,85,247,0.35);}
+.bgbtn{background:var(--sur);color:var(--tx);border:1px solid var(--bor);}.bgbtn:hover{border-color:var(--a7);color:var(--a7);}
+.btn:disabled{opacity:0.45;cursor:not-allowed;transform:none!important;}
+.br{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap;}
+.pw{margin-top:14px;display:none;}.pw.show{display:block;}
+.pb{height:6px;background:var(--bor);border-radius:3px;overflow:hidden;}
+.pf{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--a7),var(--a1));width:0;transition:width 0.3s;}
+.pl{font-size:11px;color:var(--mu);margin-top:6px;}
+.ra{background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:18px;margin-top:14px;display:none;}
+.ra.show{display:block;animation:fu 0.3s ease;}
+.ra.ok{border-color:rgba(67,233,123,0.3);background:rgba(67,233,123,0.04);}
+@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:#fff;color:#0d0d14;padding:10px 22px;border-radius:28px;font-size:12px;font-weight:700;z-index:9999;transition:transform 0.3s;box-shadow:0 6px 24px rgba(0,0,0,0.25);}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.seo-wrap{max-width:760px;margin:40px auto 0;padding:0 24px;}
+.seo-block{background:var(--card);border:1px solid var(--bor);border-radius:20px;padding:32px;margin-bottom:16px;}
+.seo-block h2{font-size:20px;font-weight:800;color:#fff;margin-bottom:14px;}
+.seo-block h3{font-size:15px;font-weight:700;color:#fff;margin:18px 0 8px;}
+.seo-block p{font-size:13px;color:var(--mu);line-height:1.85;margin-bottom:10px;}
+.seo-block ul,.seo-block ol{padding-left:20px;margin-bottom:12px;}
+.seo-block li{font-size:13px;color:var(--mu);line-height:1.85;margin-bottom:7px;}
+.seo-block li strong{color:#fff;}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:14px;}
+.feat-item{background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:16px;}
+.feat-icon{font-size:22px;margin-bottom:8px;}
+.feat-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:5px;}
+.feat-desc{font-size:12px;color:var(--mu);line-height:1.6;}
+.step-item{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start;}
+.step-num{width:34px;height:34px;background:var(--a7);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0;margin-top:2px;}
+.step-content h3{font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;}
+.step-content p{font-size:13px;color:var(--mu);line-height:1.7;margin:0;}
+.privacy-box{background:rgba(67,233,123,0.06);border:1px solid rgba(67,233,123,0.2);border-radius:12px;padding:18px;margin-top:14px;}
+.privacy-box p{color:var(--a3);font-size:13px;margin:0;line-height:1.75;}
+.faq-item{border-bottom:1px solid var(--bor);padding:16px 0;}
+.faq-item:last-child{border-bottom:none;padding-bottom:0;}
+.faq-q{font-size:14px;font-weight:700;color:#fff;margin-bottom:7px;}
+.faq-a{font-size:13px;color:var(--mu);line-height:1.75;}
+.other-tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:14px;}
+.ot-card{background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:14px;text-decoration:none;transition:all 0.2s;display:block;text-align:center;}
+.ot-card:hover{border-color:var(--a1);transform:translateY(-2px);}
+.ot-icon{font-size:24px;margin-bottom:6px;}
+.ot-name{font-size:12px;font-weight:700;color:#fff;}
+footer{text-align:center;padding:32px 20px 24px;color:var(--mu);font-size:12px;border-top:1px solid var(--bor);margin-top:40px;}
+footer strong{color:var(--a1);}
+footer a{color:var(--mu);text-decoration:none;margin:0 7px;}
+footer a:hover{color:var(--a1);}
+@media(max-width:580px){nav{padding:0 14px;}.scard{padding:20px 16px;}.seo-block{padding:22px 16px;}}
+</style>
+</head>
+<body>
+<div class="toast" id="toast">Done!</div>
+
+<nav>
+  <a class="logo" href="index.html">Tools<span>AI</span><em>Pro</em></a>
+  <div class="nav-links">
+    <a class="nl" href="index.html">Home</a>
+    <a class="nl" href="about.html">About</a>
+    <a class="nl" href="contact.html">Contact</a>
+    <a class="nl" href="privacy.html">Privacy</a>
+    <a class="nl" href="blog.html">Blog</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › Images to PDF</div>
+  <div class="tool-badge">🖼️ Free Image Tool</div>
+  <h1>Free <span>Images to PDF</span><br>Converter Online</h1>
+  <p>Convert multiple JPG, PNG and WebP images into a single PDF document instantly. No signup, no software, no watermarks — 100% free and private.</p>
+</div>
+
+<div class="tool-wrap">
+  <div class="scard">
+    <div class="sh">
+      <div class="shi">🖼️</div>
+      <div><div class="sht">Images to PDF Converter</div><div class="shs">Select one or more images to convert into a PDF</div></div>
+    </div>
+    <div class="uz" id="uzImg">
+      <div class="uzi">🖼️</div>
+      <div class="uzt">Choose Images</div>
+      <div class="uzs">JPG, PNG, WebP supported — select multiple images at once</div>
+      <div class="uzb">Browse Images</div>
+    </div>
+    <input type="file" id="imgInput" accept="image/*" multiple style="display:none">
+    <div class="thumb-grid" id="thumbGrid"></div>
+    <div class="br">
+      <button class="btn bp7" id="convertBtn" disabled>⚡ Convert to PDF</button>
+      <button class="btn bgbtn" id="clearBtn">🗑️ Clear All</button>
+    </div>
+    <div class="pw" id="convProg">
+      <div class="pb"><div class="pf" id="convFill"></div></div>
+      <div class="pl">Converting images to PDF...</div>
+    </div>
+    <div class="ra ok" id="convResult">
+      <div style="font-weight:700;color:var(--a3);font-size:15px;margin-bottom:12px;">✅ PDF Created Successfully!</div>
+      <p style="font-size:13px;color:var(--mu);margin-bottom:14px;">Your PDF is ready. All images have been combined into one document.</p>
+      <button class="btn bp7" id="dlBtn">💾 Download PDF</button>
+    </div>
+  </div>
+</div>
+
+<div class="seo-wrap">
+
+  <div class="seo-block">
+    <h2>🖼️ About Images to PDF Converter</h2>
+    <p>The ToolsAI Pro Images to PDF Converter is a free, browser-based tool that transforms your JPG, PNG and WebP image files into a professional PDF document. Each image is placed on its own page within the PDF, maintaining the original image resolution and dimensions without any quality loss.</p>
+    <p>This tool is incredibly useful across many everyday situations. Students who photograph handwritten notes or textbook pages can convert them into a proper PDF for submission. Professionals who receive product photos or design mockups can compile them into a single shareable PDF document. Anyone who takes photos of official documents like ID cards, certificates or receipts can convert them into a PDF for easy digital submission.</p>
+    <p>Unlike many online converters that require you to upload files to a remote server, our tool processes everything locally in your web browser. This means your images are never transmitted over the internet to any server, making it completely safe to use with sensitive or confidential photographs and documents.</p>
+  </div>
+
+  <div class="seo-block">
+    <h2>⚡ Key Features</h2>
+    <div class="feature-grid">
+      <div class="feat-item"><div class="feat-icon">🆓</div><div class="feat-title">Completely Free</div><div class="feat-desc">No payment, no subscription, no premium plan. Always free for everyone.</div></div>
+      <div class="feat-item"><div class="feat-icon">🔒</div><div class="feat-title">100% Private</div><div class="feat-desc">Images processed locally in your browser. Never uploaded to any server.</div></div>
+      <div class="feat-item"><div class="feat-icon">🖼️</div><div class="feat-title">Multiple Formats</div><div class="feat-desc">Supports JPG, JPEG, PNG and WebP image formats.</div></div>
+      <div class="feat-item"><div class="feat-icon">📐</div><div class="feat-title">Original Quality</div><div class="feat-desc">Images embedded at original resolution with zero quality loss.</div></div>
+      <div class="feat-item"><div class="feat-icon">♾️</div><div class="feat-title">No Image Limit</div><div class="feat-desc">Convert as many images as you need into one PDF.</div></div>
+      <div class="feat-item"><div class="feat-icon">📱</div><div class="feat-title">Mobile Friendly</div><div class="feat-desc">Works perfectly on Android phones, iPhones and tablets.</div></div>
+    </div>
+  </div>
+
+  <div class="seo-block">
+    <h2>📋 How to Use — Step by Step</h2>
+    <div class="step-item"><div class="step-num">1</div><div class="step-content"><h3>Click Browse Images</h3><p>Click the upload area or the Browse Images button to open the file picker on your device.</p></div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-content"><h3>Select Your Images</h3><p>Choose one or more JPG, PNG or WebP image files. On mobile, you can select multiple images at once from your gallery. On desktop, hold Ctrl or Command to select multiple files.</p></div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-content"><h3>Review Image Thumbnails</h3><p>Preview thumbnails of all selected images are displayed in order. Each thumbnail shows its position number. Click the X button on any thumbnail to remove that image from the list.</p></div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-content"><h3>Click Convert to PDF</h3><p>Click the Convert to PDF button to begin creating your PDF document. A progress bar shows the conversion status as each image is processed.</p></div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-content"><h3>Download Your PDF</h3><p>Once complete, click Download PDF to save your new PDF document to your device. The file is immediately ready to share, print or attach to an email.</p></div></div>
+  </div>
+
+  <div class="seo-block">
+    <h2>🔒 Safety and Privacy</h2>
+    <p>Your image files and their contents are completely private when using ToolsAI Pro. Here is a detailed explanation of how your images are handled:</p>
+    <div class="privacy-box">
+      <p>✅ <strong>Your images never leave your device.</strong> All conversion processing is performed entirely within your web browser using the PDF-Lib JavaScript library. No image data is ever transmitted to our servers or any third-party service.</p>
+    </div>
+    <p style="margin-top:14px;">When you click Convert to PDF, the tool reads your image files directly from your device memory, embeds them into a PDF document structure within your browser, and provides the final PDF as a downloadable file — all without any network communication taking place.</p>
+    <ul>
+      <li><strong>No server uploads</strong> — Images stay on your device at all times</li>
+      <li><strong>No data storage</strong> — We never store any image files or metadata</li>
+      <li><strong>No account needed</strong> — Zero personal information collected</li>
+      <li><strong>Automatic clearing</strong> — All data cleared when you close the page</li>
+    </ul>
+  </div>
+
+  <div class="seo-block">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">What image formats are supported?</div>
+      <div class="faq-a">Our Images to PDF converter supports JPG, JPEG, PNG and WebP image formats. These are the most widely used image formats on mobile phones and computers today. Each image is embedded directly into the PDF at its original quality.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Will my image quality be reduced in the PDF?</div>
+      <div class="faq-a">No. Each image is embedded into the PDF at its original resolution without any compression or quality reduction. The PDF will display your images at exactly the same quality as the original files.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How many images can I convert into one PDF?</div>
+      <div class="faq-a">There is no strict limit on the number of images. You can convert 1 image or 50 images into a single PDF. Each image appears on its own page in the order you selected them.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I convert images to PDF on my mobile phone?</div>
+      <div class="faq-a">Yes, absolutely. The tool works perfectly on Android and iOS devices. Open your browser, visit toolsaipro.github.io, tap the Images to PDF tool and select photos directly from your phone gallery.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Will there be a watermark on my PDF?</div>
+      <div class="faq-a">No. The PDF created by our tool is completely clean with no watermarks, branding or any additional content added. The file contains only the images you selected, embedded as pages.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is there a maximum file size for images?</div>
+      <div class="faq-a">There is no strict file size limit. Since all processing happens in your browser, very large high-resolution images may take slightly longer to process. For best performance, images under 10MB each are recommended.</div>
+    </div>
+  </div>
+
+  <div class="seo-block">
+    <h2>🛠️ Other Free Tools</h2>
+    <div class="other-tools">
+      <a class="ot-card" href="pdf-merger.html"><div class="ot-icon">📄</div><div class="ot-name">PDF Merger</div></a>
+      <a class="ot-card" href="image-compressor.html"><div class="ot-icon">🗜️</div><div class="ot-name">Image Compressor</div></a>
+      <a class="ot-card" href="webp-to-jpg.html"><div class="ot-icon">🔄</div><div class="ot-name">WebP to JPG</div></a>
+      <a class="ot-card" href="qr-generator.html"><div class="ot-icon">📲</div><div class="ot-name">QR Generator</div></a>
+      <a class="ot-card" href="password-generator.html"><div class="ot-icon">🔐</div><div class="ot-name">Password Generator</div></a>
+      <a class="ot-card" href="gst-calculator.html"><div class="ot-icon">🧾</div><div class="ot-name">GST Calculator</div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <strong>ToolsAI Pro</strong> — Free Online Tools | No Signup | 100% Browser Based<br><br>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="blog.html">Blog</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms</a>
+  <a href="contact.html">Contact</a>
+</footer>
+
+<script>
+function showToast(m) {
+  var t = document.getElementById("toast");
+  t.textContent = m;
+  t.classList.add("show");
+  setTimeout(function() { t.classList.remove("show"); }, 2200);
+}
+
+var imgFiles = [];
+var pdfResult = null;
+
+document.getElementById("uzImg").addEventListener("click", function() {
+  document.getElementById("imgInput").click();
+});
+
+document.getElementById("imgInput").addEventListener("change", function() {
+  Array.from(this.files).forEach(function(f) { imgFiles.push(f); });
+  renderThumbs();
+  this.value = "";
+});
+
+function renderThumbs() {
+  var grid = document.getElementById("thumbGrid");
+  grid.innerHTML = "";
+  for (var i = 0; i < imgFiles.length; i++) {
+    (function(idx) {
+      var div = document.createElement("div");
+      div.className = "thumb";
+      var img = document.createElement("img");
+      img.src = URL.createObjectURL(imgFiles[idx]);
+      var num = document.createElement("div");
+      num.className = "thumb-num";
+      num.textContent = idx + 1;
+      var btn = document.createElement("button");
+      btn.className = "thumb-rm";
+      btn.textContent = "x";
+      btn.addEventListener("click", function(e) {
+        e.stopPropagation();
+        imgFiles.splice(idx, 1);
+        renderThumbs();
+      });
+      div.appendChild(img);
+      div.appendChild(num);
+      div.appendChild(btn);
+      grid.appendChild(div);
+    })(i);
+  }
+  document.getElementById("convertBtn").disabled = imgFiles.length === 0;
+}
+
+document.getElementById("clearBtn").addEventListener("click", function() {
+  imgFiles = [];
+  document.getElementById("thumbGrid").innerHTML = "";
+  document.getElementById("convResult").classList.remove("show");
+  document.getElementById("convertBtn").disabled = true;
+});
+
+document.getElementById("convertBtn").addEventListener("click", async function() {
+  if (imgFiles.length === 0) { showToast("Please add at least one image!"); return; }
+  var pr = document.getElementById("convProg");
+  var pf = document.getElementById("convFill");
+  pr.classList.add("show");
+  document.getElementById("convResult").classList.remove("show");
+  try {
+    var pdfDoc = await PDFLib.PDFDocument.create();
+    for (var i = 0; i < imgFiles.length; i++) {
+      pf.style.width = ((i / imgFiles.length) * 90) + "%";
+      var file = imgFiles[i];
+      var ab = await file.arrayBuffer();
+      var img;
+      if (file.type === "image/png") {
+        img = await pdfDoc.embedPng(ab);
+      } else {
+        img = await pdfDoc.embedJpg(ab);
+      }
+      var page = pdfDoc.addPage([img.width, img.height]);
+      page.drawImage(img, { x: 0, y: 0, width: img.width, height: img.height });
+    }
+    pf.style.width = "100%";
+    pdfResult = await pdfDoc.save();
+    setTimeout(function() {
+      pr.classList.remove("show");
+      document.getElementById("convResult").classList.add("show");
+      showToast("PDF Created Successfully!");
+    }, 400);
+  } catch(e) {
+    pr.classList.remove("show");
+    showToast("Error: " + e.message);
+  }
+});
+
+document.getElementById("dlBtn").addEventListener("click", function() {
+  if (!pdfResult) return;
+  var blob = new Blob([pdfResult], { type: "application/pdf" });
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "images-toolsaipro.pdf";
+  a.click();
+  showToast("Downloaded!");
+});
+</script>
+</body>
+</html>
