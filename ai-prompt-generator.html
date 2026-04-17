@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJVC95H1FK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HJVC95H1FK');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free AI Prompt Generator Online — ChatGPT, YouTube, Midjourney Prompts | ToolsAI Pro</title>
+<link rel="icon" type="image/png" href="1000425998.png">
+<meta name="description" content="Free AI Prompt Generator for ChatGPT, Gemini, Claude, YouTube & Midjourney. Hindi & English support. Generate SEO tags, video prompts & creative content instantly. No signup required.">
+<meta name="keywords" content="AI prompt generator free, ChatGPT prompt generator, YouTube prompt generator, Midjourney prompt, Hindi AI prompt, SEO tags generator, AI prompt builder online">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolsaipro.in/ai-prompt-generator.html">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ══ ROOT ══ */
+:root{
+  --bg:#0d0d14;--sur:#16161f;--card:#1c1c28;--bor:#2a2a3a;
+  --a1:#6c63ff;--a2:#ff6584;--a3:#43e97b;--a4:#f7971e;--a8:#06b6d4;
+  --ai:#a78bfa;
+  --tx:#e8e8f0;--mu:#6b6b80;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--tx);font-family:"Plus Jakarta Sans",sans-serif;min-height:100vh;}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 10% 15%,rgba(167,139,250,0.07) 0%,transparent 60%),
+    radial-gradient(ellipse 50% 40% at 90% 85%,rgba(6,182,212,0.05) 0%,transparent 60%),
+    radial-gradient(ellipse 35% 30% at 50% 5%,rgba(108,99,255,0.04) 0%,transparent 60%);}
+
+/* ══ NAV ══ */
+nav{position:sticky;top:0;z-index:200;background:rgba(13,13,20,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--bor);display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:62px;}
+.logo{font-size:19px;font-weight:800;color:#fff;text-decoration:none;}
+.logo span{color:var(--a1);}.logo em{color:var(--a2);font-style:normal;}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap;}
+.nl{padding:5px 12px;border-radius:16px;font-size:11px;font-weight:600;color:var(--mu);text-decoration:none;border:1px solid transparent;transition:all 0.2s;}
+.nl:hover,.nl.act{color:var(--a8);border-color:rgba(6,182,212,0.3);}
+
+/* ══ HERO ══ */
+.page-hero{position:relative;z-index:1;text-align:center;padding:52px 24px 38px;}
+.breadcrumb{font-size:12px;color:var(--mu);margin-bottom:16px;}
+.breadcrumb a{color:var(--a8);text-decoration:none;}
+.tool-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.3);color:var(--ai);padding:5px 16px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;}
+.page-hero h1{font-size:clamp(28px,6vw,58px);font-weight:800;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px;}
+.page-hero h1 span{background:linear-gradient(135deg,var(--ai),var(--a8));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.page-hero p{font-size:14px;color:var(--mu);max-width:560px;margin:0 auto;line-height:1.75;}
+
+/* ══ TOOL WRAP ══ */
+.tool-wrap{max-width:860px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
+
+/* ══ GLASS CARD ══ */
+.scard{background:rgba(28,28,40,0.88);backdrop-filter:blur(16px);border:1px solid rgba(167,139,250,0.15);border-radius:22px;padding:28px;margin-bottom:16px;box-shadow:0 8px 40px rgba(0,0,0,0.35);}
+.sh{display:flex;align-items:center;gap:14px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--bor);}
+.shi{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(167,139,250,0.22),rgba(6,182,212,0.12));display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;border:1px solid rgba(167,139,250,0.25);}
+.sht{font-size:20px;font-weight:800;color:#fff;}
+.shs{font-size:12px;color:var(--mu);margin-top:3px;}
+
+/* ══ LABELS ══ */
+.sec-label{font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;display:block;}
+
+/* ══ LANGUAGE TOGGLE ══ */
+.lang-toggle{display:flex;background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:4px;gap:4px;width:fit-content;margin-bottom:22px;}
+.lang-btn{padding:8px 22px;border-radius:9px;border:none;font-family:"Plus Jakarta Sans",sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.22s;color:var(--mu);background:transparent;}
+.lang-btn.active{background:linear-gradient(135deg,var(--ai),var(--a8));color:#fff;box-shadow:0 3px 12px rgba(167,139,250,0.3);}
+
+/* ══ CATEGORY GRID ══ */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;margin-bottom:22px;}
+.cat-card{display:flex;flex-direction:column;align-items:center;gap:5px;padding:13px 8px;background:var(--sur);border:1.5px solid var(--bor);border-radius:12px;cursor:pointer;transition:all 0.22s;text-align:center;}
+.cat-card:hover{border-color:rgba(167,139,250,0.4);background:rgba(167,139,250,0.05);}
+.cat-card.active{border-color:var(--ai);background:rgba(167,139,250,0.1);box-shadow:0 0 0 2px rgba(167,139,250,0.12);}
+.cat-icon{font-size:20px;}
+.cat-name{font-size:11px;font-weight:700;color:var(--mu);transition:color 0.2s;}
+.cat-card.active .cat-name{color:#fff;}
+
+/* ══ YOUTUBE VIDEO TYPE ══ */
+.vtype-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.vtype-btn{padding:7px 14px;border-radius:20px;border:1.5px solid var(--bor);background:transparent;color:var(--mu);font-family:"Plus Jakarta Sans",sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:all 0.2s;}
+.vtype-btn:hover{border-color:var(--a2);color:var(--a2);}
+.vtype-btn.active{background:rgba(255,101,132,0.1);border-color:var(--a2);color:var(--a2);}
+
+/* ══ FORM ══ */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+.form-group{display:flex;flex-direction:column;gap:6px;}
+.form-input,.form-select,.form-textarea{
+  background:rgba(167,139,250,0.04);border:1.5px solid rgba(167,139,250,0.18);
+  border-radius:12px;padding:12px 16px;
+  font-family:"Plus Jakarta Sans",sans-serif;font-size:13px;font-weight:500;
+  color:var(--tx);outline:none;transition:all 0.2s;width:100%;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:rgba(167,139,250,0.5);box-shadow:0 0 0 3px rgba(167,139,250,0.08);}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--mu);}
+.form-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L1 3h10z' fill='%236b6b80'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer;background-color:rgba(167,139,250,0.04);}
+.form-select option{background:#1c1c28;color:var(--tx);}
+.form-textarea{min-height:80px;resize:vertical;line-height:1.65;}
+
+/* ══ CHIPS ══ */
+.chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.chip{padding:6px 14px;border-radius:20px;border:1.5px solid var(--bor);background:transparent;color:var(--mu);font-family:"Plus Jakarta Sans",sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;}
+.chip:hover{border-color:var(--ai);color:var(--ai);}
+.chip.active{background:linear-gradient(135deg,var(--ai),var(--a8));border-color:var(--ai);color:#fff;box-shadow:0 3px 12px rgba(167,139,250,0.3);}
+
+.mchip{padding:6px 12px;border-radius:20px;border:1.5px solid var(--bor);background:transparent;color:var(--mu);font-family:"Plus Jakarta Sans",sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:5px;}
+.mchip:hover{border-color:var(--ai);color:var(--ai);}
+.mchip.active{border-color:var(--ai);color:var(--ai);background:rgba(167,139,250,0.08);}
+
+/* ══ SEO TAGS TOGGLE ══ */
+.seo-toggle-wrap{display:flex;align-items:center;gap:12px;background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:12px 18px;margin-bottom:20px;}
+.seo-toggle-label{font-size:13px;font-weight:700;color:#fff;flex:1;}
+.seo-toggle-sub{font-size:11px;color:var(--mu);margin-top:2px;}
+.toggle-switch{position:relative;width:42px;height:24px;flex-shrink:0;}
+.toggle-switch input{opacity:0;width:0;height:0;}
+.toggle-slider{position:absolute;inset:0;background:var(--bor);border-radius:24px;cursor:pointer;transition:0.3s;}
+.toggle-slider:before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:0.3s;}
+input:checked+.toggle-slider{background:linear-gradient(135deg,var(--ai),var(--a8));}
+input:checked+.toggle-slider:before{transform:translateX(18px);}
+
+/* ══ GENERATE BTN ══ */
+.gen-btn{width:100%;padding:15px;border-radius:12px;border:none;font-family:"Plus Jakarta Sans",sans-serif;font-size:15px;font-weight:800;cursor:pointer;transition:all 0.25s;background:linear-gradient(135deg,var(--ai),var(--a8));color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px;letter-spacing:0.3px;position:relative;overflow:hidden;}
+.gen-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(167,139,250,0.4);}
+.gen-btn:active{transform:translateY(0);}
+
+/* ══ OUTPUT ══ */
+.prompt-output{display:none;}
+.prompt-output.show{display:block;animation:slideUp 0.4s cubic-bezier(0.34,1.56,0.64,1);}
+@keyframes slideUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.output-card{background:rgba(167,139,250,0.06);border:1px solid rgba(167,139,250,0.22);border-radius:16px;padding:22px;margin-bottom:14px;}
+.output-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
+.output-title{font-size:13px;font-weight:700;color:var(--ai);display:flex;align-items:center;gap:8px;}
+.output-actions{display:flex;gap:8px;flex-wrap:wrap;}
+.act-btn{padding:7px 14px;border-radius:8px;border:none;font-family:"Plus Jakarta Sans",sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;}
+.btn-copy{background:linear-gradient(135deg,var(--ai),var(--a8));color:#fff;}
+.btn-copy:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(167,139,250,0.35);}
+.btn-regen{background:var(--sur);color:var(--mu);border:1px solid var(--bor);}
+.btn-regen:hover{color:var(--ai);border-color:var(--ai);}
+.prompt-text{font-size:13px;color:var(--tx);line-height:1.85;white-space:pre-wrap;word-break:break-word;}
+.char-row{display:flex;align-items:center;justify-content:space-between;margin-top:10px;}
+.char-info{font-size:11px;color:var(--mu);font-family:"JetBrains Mono",monospace;}
+
+/* ══ SEO TAGS OUTPUT ══ */
+.seo-tags-card{background:rgba(67,233,123,0.05);border:1px solid rgba(67,233,123,0.2);border-radius:14px;padding:18px;margin-bottom:14px;display:none;}
+.seo-tags-card.show{display:block;animation:slideUp 0.35s ease;}
+.seo-tags-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.seo-tags-title{font-size:13px;font-weight:700;color:var(--a3);}
+.tags-wrap{display:flex;flex-wrap:wrap;gap:7px;}
+.tag-pill{padding:5px 12px;background:rgba(67,233,123,0.1);border:1px solid rgba(67,233,123,0.2);border-radius:20px;font-size:11px;font-weight:600;color:var(--a3);cursor:pointer;transition:all 0.2s;}
+.tag-pill:hover{background:rgba(67,233,123,0.18);transform:scale(1.05);}
+
+/* ══ WHATSAPP SHARE ══ */
+.share-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+.wa-btn{display:flex;align-items:center;gap:8px;padding:11px 20px;border-radius:11px;border:none;font-family:"Plus Jakarta Sans",sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.25s;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;box-shadow:0 4px 16px rgba(37,211,102,0.3);text-decoration:none;}
+.wa-btn:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(37,211,102,0.45);}
+.wa-icon{width:20px;height:20px;fill:#fff;}
+.save-btn{display:flex;align-items:center;gap:7px;padding:11px 18px;border-radius:11px;border:1.5px solid rgba(167,139,250,0.3);background:rgba(167,139,250,0.06);color:var(--ai);font-family:"Plus Jakarta Sans",sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s;}
+.save-btn:hover{border-color:var(--ai);background:rgba(167,139,250,0.12);}
+.clr-btn{display:flex;align-items:center;gap:7px;padding:11px 18px;border-radius:11px;border:1.5px solid var(--bor);background:transparent;color:var(--mu);font-family:"Plus Jakarta Sans",sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s;}
+.clr-btn:hover{border-color:var(--a2);color:var(--a2);}
+
+/* ══ SAVED ══ */
+.saved-wrap{margin-top:18px;padding-top:18px;border-top:1px solid var(--bor);}
+.saved-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.saved-title-txt{font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:1px;}
+.saved-clear-btn{font-size:11px;font-weight:600;color:var(--mu);cursor:pointer;border:none;background:none;font-family:inherit;transition:color 0.2s;}
+.saved-clear-btn:hover{color:var(--a2);}
+.saved-list{display:flex;flex-direction:column;gap:6px;}
+.saved-item{display:flex;align-items:center;gap:10px;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:10px 14px;}
+.saved-text{font-size:12px;color:var(--tx);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.saved-copy-btn{background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:2px 6px;border-radius:5px;transition:all 0.2s;}
+.saved-copy-btn:hover{color:var(--ai);}
+.saved-empty{font-size:12px;color:var(--mu);text-align:center;padding:14px 0;}
+
+/* ══ HOW TO USE ══ */
+.how-section{max-width:860px;margin:0 auto 16px;padding:0 24px;position:relative;z-index:1;}
+.how-card{background:rgba(28,28,40,0.82);backdrop-filter:blur(14px);border:1px solid rgba(6,182,212,0.15);border-radius:20px;padding:28px;}
+.how-title{font-size:18px;font-weight:800;color:#fff;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.how-step{background:var(--sur);border:1px solid var(--bor);border-radius:14px;padding:18px;transition:all 0.2s;position:relative;}
+.how-step:hover{border-color:rgba(6,182,212,0.3);transform:translateY(-2px);}
+.step-num{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--ai),var(--a8));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;margin-bottom:10px;}
+.step-icon{font-size:22px;margin-bottom:8px;}
+.step-title{font-size:13px;font-weight:800;color:#fff;margin-bottom:5px;}
+.step-desc{font-size:11px;color:var(--mu);line-height:1.6;}
+
+/* ══ 13 TOOLS GRID ══ */
+.tools-section{max-width:860px;margin:0 auto 16px;padding:0 24px;position:relative;z-index:1;}
+.tools-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+.tools-section-title{font-size:13px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:1.2px;}
+.tools-grid-13{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.tc{background:rgba(28,28,40,0.85);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:18px 14px;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;transition:all 0.28s cubic-bezier(0.34,1.2,0.64,1);position:relative;overflow:hidden;text-align:center;}
+.tc::before{content:"";position:absolute;inset:0;border-radius:16px;opacity:0;transition:opacity 0.25s;pointer-events:none;}
+.tc:hover{transform:translateY(-3px);}
+.tc:hover::before{opacity:1;}
+.tc.pdf{border-color:rgba(255,101,132,0.12);}
+.tc.pdf:hover{border-color:rgba(255,101,132,0.5);box-shadow:0 8px 24px rgba(255,101,132,0.15);}
+.tc.pdf::before{background:radial-gradient(ellipse at 50% 0%,rgba(255,101,132,0.1),transparent 70%);}
+.tc.img{border-color:rgba(6,182,212,0.12);}
+.tc.img:hover{border-color:rgba(6,182,212,0.5);box-shadow:0 8px 24px rgba(6,182,212,0.15);}
+.tc.img::before{background:radial-gradient(ellipse at 50% 0%,rgba(6,182,212,0.1),transparent 70%);}
+.tc.tool{border-color:rgba(108,99,255,0.12);}
+.tc.tool:hover{border-color:rgba(108,99,255,0.5);box-shadow:0 8px 24px rgba(108,99,255,0.15);}
+.tc.tool::before{background:radial-gradient(ellipse at 50% 0%,rgba(108,99,255,0.1),transparent 70%);}
+.tc.calc{border-color:rgba(67,233,123,0.12);}
+.tc.calc:hover{border-color:rgba(67,233,123,0.5);box-shadow:0 8px 24px rgba(67,233,123,0.15);}
+.tc.calc::before{background:radial-gradient(ellipse at 50% 0%,rgba(67,233,123,0.1),transparent 70%);}
+.tc.hlth{border-color:rgba(247,151,30,0.12);}
+.tc.hlth:hover{border-color:rgba(247,151,30,0.5);box-shadow:0 8px 24px rgba(247,151,30,0.15);}
+.tc.hlth::before{background:radial-gradient(ellipse at 50% 0%,rgba(247,151,30,0.1),transparent 70%);}
+.tc.ai{border-color:rgba(167,139,250,0.2);background:rgba(167,139,250,0.06);}
+.tc.ai:hover{border-color:rgba(167,139,250,0.6);box-shadow:0 8px 24px rgba(167,139,250,0.2);}
+.tc.ai::before{background:radial-gradient(ellipse at 50% 0%,rgba(167,139,250,0.12),transparent 70%);}
+.tc-icon-wrap{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;transition:transform 0.25s;}
+.tc:hover .tc-icon-wrap{transform:scale(1.1) rotate(-3deg);}
+.ic-pdf{background:rgba(255,101,132,0.14);border:1px solid rgba(255,101,132,0.25);}
+.ic-img{background:rgba(6,182,212,0.14);border:1px solid rgba(6,182,212,0.25);}
+.ic-tool{background:rgba(108,99,255,0.14);border:1px solid rgba(108,99,255,0.25);}
+.ic-calc{background:rgba(67,233,123,0.14);border:1px solid rgba(67,233,123,0.25);}
+.ic-hlth{background:rgba(247,151,30,0.14);border:1px solid rgba(247,151,30,0.25);}
+.ic-ai{background:rgba(167,139,250,0.16);border:1px solid rgba(167,139,250,0.3);}
+.tc-name{font-size:10.5px;font-weight:700;color:#c4c4d4;line-height:1.4;transition:color 0.2s;}
+.tc:hover .tc-name{color:#fff;}
+.tc-badge{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;padding:2px 8px;border-radius:20px;}
+.badge-free{background:rgba(67,233,123,0.12);color:#43e97b;border:1px solid rgba(67,233,123,0.22);}
+.badge-new{background:rgba(247,151,30,0.12);color:#f7971e;border:1px solid rgba(247,151,30,0.22);}
+.badge-ai{background:rgba(167,139,250,0.15);color:var(--ai);border:1px solid rgba(167,139,250,0.3);}
+.badge-pro{background:rgba(108,99,255,0.12);color:#8b83ff;border:1px solid rgba(108,99,255,0.22);}
+
+/* ══ SEO BLOCKS ══ */
+.seo-wrap{max-width:860px;margin:0 auto 0;padding:0 24px;position:relative;z-index:1;}
+.seo-block{background:rgba(28,28,40,0.72);backdrop-filter:blur(12px);border:1px solid var(--bor);border-radius:20px;padding:30px;margin-bottom:14px;}
+.seo-block h2{font-size:19px;font-weight:800;color:#fff;margin-bottom:13px;}
+.seo-block h3{font-size:14px;font-weight:700;color:#fff;margin:16px 0 7px;}
+.seo-block p{font-size:13px;color:var(--mu);line-height:1.85;margin-bottom:10px;}
+.seo-block ul{padding-left:20px;margin-bottom:10px;}
+.seo-block li{font-size:13px;color:var(--mu);line-height:1.85;margin-bottom:6px;}
+.seo-block li strong{color:#fff;}
+.faq-item{border-bottom:1px solid var(--bor);padding:14px 0;}
+.faq-item:last-child{border-bottom:none;padding-bottom:0;}
+.faq-q{font-size:13px;font-weight:700;color:#fff;margin-bottom:6px;}
+.faq-a{font-size:12px;color:var(--mu);line-height:1.75;}
+
+/* ══ FOOTER ══ */
+footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44px 24px 24px;margin-top:60px;position:relative;z-index:1;}
+.footer-inner{max-width:1000px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px;margin-bottom:32px;}
+.footer-brand p{font-size:12px;color:var(--mu);line-height:1.75;margin-top:8px;}
+.footer-col h4{font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;}
+.footer-col a{display:block;font-size:12px;color:var(--mu);text-decoration:none;margin-bottom:8px;transition:color 0.2s;}
+.footer-col a:hover{color:var(--a8);}
+.footer-bottom{border-top:1px solid var(--bor);padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-bottom p{font-size:11px;color:var(--mu);}
+.footer-bottom strong{color:var(--a1);}
+.f-links{display:flex;gap:16px;}
+.f-links a{font-size:11px;color:var(--mu);text-decoration:none;transition:color 0.2s;}
+.f-links a:hover{color:var(--a1);}
+
+/* ══ TOAST ══ */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:#fff;color:#0d0d14;padding:10px 22px;border-radius:28px;font-size:12px;font-weight:700;z-index:9999;transition:transform 0.3s;box-shadow:0 6px 24px rgba(0,0,0,0.25);white-space:nowrap;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:860px){
+  .tools-grid-13{grid-template-columns:repeat(3,1fr);}
+  .how-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  nav{padding:0 14px;}
+  .scard{padding:20px 16px;}
+  .form-row{grid-template-columns:1fr;}
+  .cat-grid{grid-template-columns:repeat(3,1fr);}
+  .tools-grid-13{grid-template-columns:repeat(2,1fr);}
+  .how-grid{grid-template-columns:1fr;}
+  .share-row{flex-direction:column;}
+  .wa-btn,.save-btn,.clr-btn{justify-content:center;}
+}
+</style>
+</head>
+<body>
+<div class="toast" id="toast"></div>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="logo" href="/">Tools<span>AI</span><em>Pro</em></a>
+  <div class="nav-links">
+    <a class="nl" href="/">Home</a>
+    <a class="nl" href="/about.html">About</a>
+    <a class="nl act" href="/tools-hub.html">Tools Hub</a>
+    <a class="nl" href="/contact.html">Contact</a>
+    <a class="nl" href="/privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › AI Prompt Generator</div>
+  <div class="tool-badge">🤖 NEW — AI Tool #13</div>
+  <h1>Free <span>AI Prompt Generator</span><br>Online</h1>
+  <p>ChatGPT, YouTube, Midjourney, Gemini ke liye powerful prompts banao — Hindi & English support, SEO tags aur video type selector ke saath. No signup required.</p>
+</div>
+
+<!-- ══ TOOL ══ -->
+<div class="tool-wrap">
+<div class="scard">
+  <div class="sh">
+    <div class="shi">🤖</div>
+    <div>
+      <div class="sht">AI Prompt Generator</div>
+      <div class="shs">Category → Options → Language → Generate → Copy & Use</div>
+    </div>
+  </div>
+
+  <!-- LANGUAGE -->
+  <span class="sec-label">Language / भाषा</span>
+  <div class="lang-toggle" style="margin-bottom:22px;">
+    <button class="lang-btn active" onclick="setLang('en',this)">🇬🇧 English</button>
+    <button class="lang-btn" onclick="setLang('hi',this)">🇮🇳 Hindi</button>
+    <button class="lang-btn" onclick="setLang('mix',this)">🔀 Hinglish</button>
+  </div>
+
+  <!-- CATEGORY -->
+  <span class="sec-label" id="label-cat">Step 1 — Choose Category</span>
+  <div class="cat-grid" id="catGrid">
+    <div class="cat-card active" onclick="selectCat(this,'writing')"><span class="cat-icon">✍️</span><span class="cat-name">Writing</span></div>
+    <div class="cat-card" onclick="selectCat(this,'youtube')"><span class="cat-icon">📺</span><span class="cat-name">YouTube</span></div>
+    <div class="cat-card" onclick="selectCat(this,'coding')"><span class="cat-icon">💻</span><span class="cat-name">Coding</span></div>
+    <div class="cat-card" onclick="selectCat(this,'marketing')"><span class="cat-icon">📢</span><span class="cat-name">Marketing</span></div>
+    <div class="cat-card" onclick="selectCat(this,'business')"><span class="cat-icon">💼</span><span class="cat-name">Business</span></div>
+    <div class="cat-card" onclick="selectCat(this,'education')"><span class="cat-icon">📚</span><span class="cat-name">Education</span></div>
+    <div class="cat-card" onclick="selectCat(this,'image')"><span class="cat-icon">🎨</span><span class="cat-name">Image/Art</span></div>
+    <div class="cat-card" onclick="selectCat(this,'seo')"><span class="cat-icon">🔍</span><span class="cat-name">SEO</span></div>
+    <div class="cat-card" onclick="selectCat(this,'social')"><span class="cat-icon">📱</span><span class="cat-name">Social</span></div>
+    <div class="cat-card" onclick="selectCat(this,'email')"><span class="cat-icon">📧</span><span class="cat-name">Email</span></div>
+    <div class="cat-card" onclick="selectCat(this,'ideas')"><span class="cat-icon">💡</span><span class="cat-name">Ideas</span></div>
+    <div class="cat-card" onclick="selectCat(this,'personal')"><span class="cat-icon">🙋</span><span class="cat-name">Personal</span></div>
+  </div>
+
+  <!-- YOUTUBE VIDEO TYPE — shows only when YouTube selected -->
+  <div id="ytTypeWrap" style="display:none;margin-bottom:18px;">
+    <span class="sec-label">YouTube Video Type</span>
+    <div class="vtype-row">
+      <button class="vtype-btn active" onclick="setVType(this,'longvideo')">🎬 Long Video</button>
+      <button class="vtype-btn" onclick="setVType(this,'shorts')">⚡ Shorts</button>
+      <button class="vtype-btn" onclick="setVType(this,'mystery')">🔮 Mystery/Horror</button>
+      <button class="vtype-btn" onclick="setVType(this,'educational')">📖 Educational</button>
+      <button class="vtype-btn" onclick="setVType(this,'vlog')">📷 Vlog</button>
+      <button class="vtype-btn" onclick="setVType(this,'comedy')">😂 Comedy</button>
+    </div>
+  </div>
+
+  <!-- TOPIC + AUDIENCE -->
+  <span class="sec-label" id="label-step2">Step 2 — Describe Your Goal</span>
+  <div class="form-row">
+    <div class="form-group">
+      <label class="sec-label" style="margin-bottom:2px;" id="label-topic">Topic / What do you need?</label>
+      <input type="text" class="form-input" id="topicInput" placeholder="e.g. 5 AI tools for beginners...">
+    </div>
+    <div class="form-group">
+      <label class="sec-label" style="margin-bottom:2px;" id="label-audience">Target Audience</label>
+      <input type="text" class="form-input" id="audienceInput" placeholder="e.g. beginners, students, developers...">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label class="sec-label" style="margin-bottom:2px;">Output Format</label>
+      <select class="form-select" id="formatSelect">
+        <option value="detailed">Detailed explanation</option>
+        <option value="bullet">Bullet point list</option>
+        <option value="step">Step-by-step guide</option>
+        <option value="table">Table / comparison</option>
+        <option value="story">Story / narrative</option>
+        <option value="code">Code with comments</option>
+        <option value="short">Short & concise</option>
+        <option value="faq">FAQ format</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="sec-label" style="margin-bottom:2px;">Prompt Length</label>
+      <select class="form-select" id="lengthSelect">
+        <option value="short">Short (quick task)</option>
+        <option value="medium" selected>Medium (standard)</option>
+        <option value="detailed">Detailed (complex)</option>
+        <option value="expert">Expert (max detail)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- TONE -->
+  <span class="sec-label" id="label-step3">Step 3 — Select Tone</span>
+  <div class="chip-row">
+    <button class="chip active" onclick="selectTone(this,'professional')">💼 Professional</button>
+    <button class="chip" onclick="selectTone(this,'friendly')">😊 Friendly</button>
+    <button class="chip" onclick="selectTone(this,'creative')">🎨 Creative</button>
+    <button class="chip" onclick="selectTone(this,'technical')">⚙️ Technical</button>
+    <button class="chip" onclick="selectTone(this,'persuasive')">🔥 Persuasive</button>
+    <button class="chip" onclick="selectTone(this,'dramatic')">🎭 Dramatic</button>
+    <button class="chip" onclick="selectTone(this,'casual')">👋 Casual</button>
+    <button class="chip" onclick="selectTone(this,'humorous')">😄 Humorous</button>
+  </div>
+
+  <!-- AI MODEL -->
+  <span class="sec-label" id="label-step4">Step 4 — Target AI Model</span>
+  <div class="chip-row" style="margin-bottom:20px;">
+    <button class="mchip active" onclick="selectModel(this,'chatgpt')">🟢 ChatGPT</button>
+    <button class="mchip" onclick="selectModel(this,'gemini')">🔵 Gemini</button>
+    <button class="mchip" onclick="selectModel(this,'claude')">🟠 Claude</button>
+    <button class="mchip" onclick="selectModel(this,'midjourney')">🎨 Midjourney</button>
+    <button class="mchip" onclick="selectModel(this,'dalle')">🖼️ DALL-E</button>
+    <button class="mchip" onclick="selectModel(this,'general')">✨ Any AI</button>
+  </div>
+
+  <!-- SEO TAGS TOGGLE -->
+  <div class="seo-toggle-wrap">
+    <div>
+      <div class="seo-toggle-label">🏷️ Generate SEO Tags / Keywords</div>
+      <div class="seo-toggle-sub">YouTube ke liye 15-20 SEO tags automatically generate honge</div>
+    </div>
+    <label class="toggle-switch">
+      <input type="checkbox" id="seoToggle" checked>
+      <span class="toggle-slider"></span>
+    </label>
+  </div>
+
+  <!-- EXTRA CONTEXT -->
+  <span class="sec-label">Extra Context (Optional)</span>
+  <textarea class="form-textarea" id="contextInput" placeholder="Koi specific requirement, examples ya additional details likho..." style="margin-bottom:20px;"></textarea>
+
+  <!-- GENERATE -->
+  <button class="gen-btn" onclick="generatePrompt()">✨ Generate AI Prompt</button>
+
+  <!-- ══ OUTPUT ══ -->
+  <div class="prompt-output" id="promptOutput">
+
+    <!-- PROMPT CARD -->
+    <div class="output-card">
+      <div class="output-header">
+        <span class="output-title">✨ Generated Prompt</span>
+        <div class="output-actions">
+          <button class="act-btn btn-regen" onclick="generatePrompt()">🔄 Regenerate</button>
+          <button class="act-btn btn-copy" id="copyBtn" onclick="copyPrompt()">📋 Copy</button>
+        </div>
+      </div>
+      <div class="prompt-text" id="promptText"></div>
+      <div class="char-row">
+        <span class="char-info" id="charCount">0 characters</span>
+        <span class="char-info" id="wordCount">0 words</span>
+      </div>
+    </div>
+
+    <!-- SEO TAGS -->
+    <div class="seo-tags-card" id="seoTagsCard">
+      <div class="seo-tags-header">
+        <span class="seo-tags-title">🏷️ SEO Tags / YouTube Keywords</span>
+        <button class="act-btn btn-copy" style="font-size:11px;padding:5px 12px;" onclick="copyTags()">📋 Copy All Tags</button>
+      </div>
+      <div class="tags-wrap" id="tagsWrap"></div>
+    </div>
+
+    <!-- SHARE + SAVE + CLEAR -->
+    <div class="share-row">
+      <a class="wa-btn" id="waShareBtn" href="#" target="_blank" rel="noopener">
+        <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Share on WhatsApp
+      </a>
+      <button class="save-btn" onclick="savePrompt()">💾 Save Prompt</button>
+      <button class="clr-btn" onclick="clearAll()">✕ Clear All</button>
+    </div>
+
+  </div><!-- /promptOutput -->
+
+  <!-- SAVED PROMPTS -->
+  <div class="saved-wrap">
+    <div class="saved-header">
+      <span class="saved-title-txt">💾 Saved Prompts (Session)</span>
+      <button class="saved-clear-btn" onclick="clearSaved()">Clear All</button>
+    </div>
+    <div class="saved-list" id="savedList">
+      <div class="saved-empty">Koi saved prompt nahi — upar generate karo aur save karo.</div>
+    </div>
+  </div>
+
+</div><!-- /scard -->
+</div><!-- /tool-wrap -->
+
+<!-- ══ HOW TO USE ══ -->
+<div class="how-section">
+  <div class="how-card">
+    <div class="how-title">📖 How to Use — Step by Step Guide</div>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="step-num">1</div>
+        <div class="step-icon">🌐</div>
+        <div class="step-title">Language Chuno</div>
+        <div class="step-desc">English, Hindi ya Hinglish mein se apni pasand ki language select karo. Prompt usi language mein generate hoga.</div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">2</div>
+        <div class="step-icon">🗂️</div>
+        <div class="step-title">Category Select Karo</div>
+        <div class="step-desc">12 categories mein se apna kaam select karo — Writing, YouTube, Coding, Marketing aur aur bhi!</div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">3</div>
+        <div class="step-icon">✍️</div>
+        <div class="step-title">Topic Bharo</div>
+        <div class="step-desc">Apna topic ya goal likho. Jitna specific hoga, utna better prompt milega. Audience bhi add kar sakte ho.</div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">4</div>
+        <div class="step-icon">🎨</div>
+        <div class="step-title">Tone & Model Chuno</div>
+        <div class="step-desc">Professional, Friendly ya Creative tone select karo. Phir apna target AI model — ChatGPT, Gemini, Claude etc.</div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">5</div>
+        <div class="step-icon">✨</div>
+        <div class="step-title">Generate Karo</div>
+        <div class="step-desc">"Generate AI Prompt" button dabao. Ek structured, ready-to-use prompt instantly ban jayega.</div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">6</div>
+        <div class="step-icon">📋</div>
+        <div class="step-title">Copy & Use Karo</div>
+        <div class="step-desc">Copy button se prompt copy karo aur directly ChatGPT, Gemini ya kisi bhi AI tool mein paste kar do!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 13 TOOLS GRID ══ -->
+<div class="tools-section">
+  <div class="tools-section-header">
+    <span class="tools-section-title">🛠️ All 13 Free Tools</span>
+  </div>
+  <div class="tools-grid-13">
+
+    <a class="tc pdf" href="/pdf-merger.html">
+      <div class="tc-icon-wrap ic-pdf">📄</div>
+      <span class="tc-name">Free PDF Merger Online</span>
+      <span class="tc-badge badge-free">Free</span>
+    </a>
+
+    <a class="tc pdf" href="/images-to-pdf.html">
+      <div class="tc-icon-wrap ic-pdf">🖼️</div>
+      <span class="tc-name">Images to PDF Converter</span>
+      <span class="tc-badge badge-free">Free</span>
+    </a>
+
+    <a class="tc img" href="/image-compressor.html">
+      <div class="tc-icon-wrap ic-img">🗜️</div>
+      <span class="tc-name">Image Compressor Online</span>
+      <span class="tc-badge badge-free">Free</span>
+    </a>
+
+    <a class="tc img" href="/webp-to-jpg.html">
+      <div class="tc-icon-wrap ic-img">🔄</div>
+      <span class="tc-name">All-in-One Image Converter</span>
+      <span class="tc-badge badge-free">Free</span>
+    </a>
+
+    <a class="tc img" href="/qr-generator.html">
+      <div class="tc-icon-wrap ic-img">📲</div>
+      <span class="tc-name">Universal QR Code Generator</span>
+      <span class="tc-badge badge-free">Free</span>
+    </a>
+
+    <a class="tc tool" href="/color-picker.html">
+      <div class="tc-icon-wrap ic-tool">🎨</div>
+      <span class="tc-name">Color Picker & Palette</span>
+      <span class="tc-badge badge-pro">Pro</span>
+    </a>
+
+    <a class="tc tool" href="/password-generator.html">
+      <div class="tc-icon-wrap ic-tool">🔐</div>
+      <span class="tc-name">Password Generator</span>
+      <span class="tc-badge badge-pro">Pro</span>
+    </a>
+
+    <a class="tc tool" href="/word-counter.html">
+      <div class="tc-icon-wrap ic-tool">📝</div>
+      <span class="tc-name">Word & Character Counter</span>
+      <span class="tc-badge badge-pro">Pro</span>
+    </a>
+
+    <a class="tc calc" href="/age-calculator.html">
+      <div class="tc-icon-wrap ic-calc">🎂</div>
+      <span class="tc-name">Age Calculator Online</span>
+      <span class="tc-badge badge-pro">Pro</span>
+    </a>
+
+    <a class="tc calc" href="/gst-calculator.html">
+      <div class="tc-icon-wrap ic-calc">🧾</div>
+      <span class="tc-name">GST Calculator Online</span>
+      <span class="tc-badge badge-pro">Pro</span>
+    </a>
+
+    <a class="tc hlth" href="/bmi-calculator.html">
+      <div class="tc-icon-wrap ic-hlth">💪</div>
+      <span class="tc-name">BMI Calculator Online</span>
+      <span class="tc-badge badge-new">New</span>
+    </a>
+
+    <a class="tc hlth" href="/unit-converter.html">
+      <div class="tc-icon-wrap ic-hlth">🔁</div>
+      <span class="tc-name">Unit Converter Pro</span>
+      <span class="tc-badge badge-new">New</span>
+    </a>
+
+    <a class="tc ai" href="/ai-prompt-generator.html">
+      <div class="tc-icon-wrap ic-ai">🤖</div>
+      <span class="tc-name">AI Prompt Generator</span>
+      <span class="tc-badge badge-ai">AI</span>
+    </a>
+
+  </div>
+</div>
+
+<!-- ══ SEO ══ -->
+<div class="seo-wrap" style="margin-top:16px;">
+
+  <div class="seo-block">
+    <h2>🤖 AI Prompt Generator kya hai aur kyun use karein?</h2>
+    <p>AI Prompt Generator ek free online tool hai jo aapko ChatGPT, Google Gemini, Anthropic Claude, Midjourney aur DALL-E jaise AI tools ke liye perfect, structured prompts banane mein help karta hai. Aap jitna better prompt denge, AI utna hi accurate aur useful response dega.</p>
+    <p>Hamare tool mein 12 categories, Hindi/English/Hinglish language support, 8 tone options, 6 AI model preferences, YouTube-specific video types, aur automatic SEO tags generation shamil hai — sab kuch bilkul free aur browser mein!</p>
+    <h3>YouTube Creators ke liye</h3>
+    <p>YouTube Long Video, Shorts, Mystery/Horror, Educational, Vlog ya Comedy — har type ke liye optimised prompts generate karo. SEO tags toggle se 15-20 YouTube keywords bhi automatically milenge.</p>
+    <h3>Hindi Support kyu zaroori hai?</h3>
+    <p>India mein lakho creators aur professionals Hindi ya Hinglish mein kaam karte hain. Hamare tool mein language selector se aap Hindi ya Hinglish mein prompts generate kar sakte hain — ChatGPT aur Gemini dono Hindi samajhte hain.</p>
+  </div>
+
+  <div class="seo-block">
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Kya yeh tool bilkul free hai?</div>
+      <div class="faq-a">Haan, 100% free hai. Koi account nahi, koi signup nahi, koi limit nahi. Sab kuch aapke browser mein hota hai — koi data server pe nahi jaata.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">ChatGPT ke liye best prompt kaise likhein?</div>
+      <div class="faq-a">ChatGPT ke liye best prompts mein role assignment, clear task, target audience, output format aur tone specify karna zaroori hai. Hamar generator yeh sab automatically karta hai.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">YouTube Shorts ke liye alag prompt kyu chahiye?</div>
+      <div class="faq-a">Shorts ke liye script 60 seconds se kam honi chahiye, hook pehle 3 seconds mein aana chahiye, aur CTA clear hona chahiye. Hamar YouTube Shorts prompt type in sab elements ko automatically include karta hai.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">SEO tags feature kya karta hai?</div>
+      <div class="faq-a">SEO tags toggle on karne par tool automatically 15-20 YouTube-optimised keywords generate karta hai jo aapke topic se related hote hain. Inhe directly YouTube video tags mein paste kar sakte ho.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Midjourney prompt aur ChatGPT prompt mein kya fark hai?</div>
+      <div class="faq-a">Midjourney prompts noun-heavy, descriptive hote hain — art style, lighting, colors, composition specify karte hain. ChatGPT prompts sentence-based, instruction-oriented hote hain. Hamar tool model select karne par automatically sahi format use karta hai.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Generated prompts commercially use kar sakte hain?</div>
+      <div class="faq-a">Haan, bilkul. Is tool se generate hue prompts aapke hain — client work, business ya kisi bhi commercial purpose ke liye freely use kar sakte hain.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="/">Tools<span>AI</span><em>Pro</em></a>
+        <p>Free, private aur browser-based online tools for everyone. No signup. No data uploads. No cost. Ever.</p>
+        <p style="margin-top:10px;font-size:11px;color:var(--mu);">📧 karnaray.tools@gmail.com</p>
+      </div>
+      <div class="footer-col">
+        <h4>PDF & Image Tools</h4>
+        <a href="/pdf-merger.html">Free PDF Merger Online</a>
+        <a href="/images-to-pdf.html">Images to PDF Converter</a>
+        <a href="/image-compressor.html">Free Image Compressor</a>
+        <a href="/webp-to-jpg.html">All-in-One Image Converter</a>
+        <a href="/qr-generator.html">QR Code Generator</a>
+        <a href="/color-picker.html">Color Picker & Palette</a>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators & AI Tools</h4>
+        <a href="/password-generator.html">Password Generator</a>
+        <a href="/word-counter.html">Word & Character Counter</a>
+        <a href="/age-calculator.html">Age Calculator Online</a>
+        <a href="/gst-calculator.html">GST Calculator Online</a>
+        <a href="/bmi-calculator.html">BMI Calculator Online</a>
+        <a href="/ai-prompt-generator.html">AI Prompt Generator 🤖</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <strong>ToolsAI Pro</strong>. All rights reserved. Built with ❤️ for everyone.</p>
+      <div class="f-links">
+        <a href="/about.html">About</a>
+        <a href="/tools-hub.html">Tools Hub</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ JAVASCRIPT ══ -->
+<script>
+/* ── STATE ── */
+var LANG  = "en";
+var CAT   = "writing";
+var TONE  = "professional";
+var MODEL = "chatgpt";
+var VTYPE = "longvideo";
+var savedPrompts = [];
+var lastPrompt   = "";
+var lastTags     = [];
+
+/* ── SELECTORS ── */
+function setLang(l,btn){
+  LANG = l;
+  document.querySelectorAll(".lang-btn").forEach(function(b){b.classList.remove("active");});
+  btn.classList.add("active");
+}
+function selectCat(el,cat){
+  document.querySelectorAll(".cat-card").forEach(function(c){c.classList.remove("active");});
+  el.classList.add("active"); CAT = cat;
+  document.getElementById("ytTypeWrap").style.display = (cat==="youtube") ? "block" : "none";
+}
+function setVType(btn,vt){
+  VTYPE = vt;
+  document.querySelectorAll(".vtype-btn").forEach(function(b){b.classList.remove("active");});
+  btn.classList.add("active");
+}
+function selectTone(el,t){
+  document.querySelectorAll(".chip").forEach(function(c){c.classList.remove("active");});
+  el.classList.add("active"); TONE = t;
+}
+function selectModel(el,m){
+  document.querySelectorAll(".mchip").forEach(function(c){c.classList.remove("active");});
+  el.classList.add("active"); MODEL = m;
+}
+
+/* ── PROMPT DATA ── */
+var ROLES_EN = {
+  writing:"You are an expert content writer with 15+ years of experience creating compelling, engaging written content.",
+  youtube:"You are a professional YouTube scriptwriter and video strategist who creates viral, high-retention content.",
+  coding:"You are a senior software engineer with deep expertise in multiple programming languages and system design.",
+  marketing:"You are a world-class digital marketing strategist and copywriter who has driven growth for Fortune 500 companies.",
+  business:"You are an experienced business consultant and strategist with expertise in operations, growth and decision-making.",
+  education:"You are a master educator who specialises in making complex topics clear, engaging and memorable.",
+  image:"You are an expert at crafting precise, vivid and technically optimised prompts for AI image generation models.",
+  seo:"You are an expert SEO strategist who understands search algorithms, user intent and content optimisation deeply.",
+  social:"You are a social media expert and viral content strategist who understands engagement on every platform.",
+  email:"You are an email marketing specialist who writes high-converting copy with exceptional open and click rates.",
+  ideas:"You are a creative innovation consultant who generates bold, actionable ideas and breakthrough concepts.",
+  personal:"You are a thoughtful life coach and personal development expert who gives practical, empathetic guidance."
+};
+var ROLES_HI = {
+  writing:"Aap ek expert content writer hain jinhe 15+ saalon ka experience hai compelling aur engaging content likhne ka.",
+  youtube:"Aap ek professional YouTube scriptwriter hain jo viral, high-retention videos ke liye content banate hain.",
+  coding:"Aap ek senior software engineer hain jo multiple programming languages aur system design mein expert hain.",
+  marketing:"Aap ek world-class digital marketing strategist hain jo brands ko grow karne mein expert hain.",
+  business:"Aap ek experienced business consultant hain jo operations, growth aur strategy mein expert hain.",
+  education:"Aap ek master educator hain jo complex topics ko simple, engaging aur yaadgar tarike se sikhate hain.",
+  image:"Aap AI image generation ke liye perfect, vivid prompts banane mein expert hain.",
+  seo:"Aap ek expert SEO strategist hain jo search algorithms aur content optimization mein mahir hain.",
+  social:"Aap ek viral social media expert hain jo har platform pe engagement create karte hain.",
+  email:"Aap ek email marketing specialist hain jo high-converting copy likhte hain.",
+  ideas:"Aap ek creative innovation consultant hain jo bold aur actionable ideas generate karte hain.",
+  personal:"Aap ek empathetic life coach hain jo practical personal development guidance dete hain."
+};
+var ROLES_MIX = {
+  writing:"Aap ek expert content writer ho jinhe compelling writing ka deep experience hai.",
+  youtube:"Aap ek professional YouTube scriptwriter ho jo viral videos ke liye killer content banate ho.",
+  coding:"Aap ek senior software engineer ho with expertise in multiple languages and system design.",
+  marketing:"Aap ek top digital marketing strategist ho jo brands ko grow karne mein expert ho.",
+  business:"Aap ek experienced business consultant ho with deep expertise in strategy and operations.",
+  education:"Aap ek master educator ho jo complex topics ko simple aur engaging way mein explain karte ho.",
+  image:"Aap AI image prompts banane mein expert ho — vivid, detailed aur technically optimised.",
+  seo:"Aap ek SEO expert ho jo search algorithms aur content optimization ko deeply samajhte ho.",
+  social:"Aap ek viral social media expert ho jo engagement create karna jaante ho.",
+  email:"Aap ek email marketing specialist ho jo high-converting copy likhte ho.",
+  ideas:"Aap ek creative consultant ho jo bold aur actionable ideas generate karte ho.",
+  personal:"Aap ek empathetic life coach ho jo practical guidance dete ho."
+};
+
+var VTYPE_NOTES = {
+  longvideo:"Create a full-length YouTube video script (8-15 minutes) with strong hook, engaging body sections and clear CTA.",
+  shorts:"Create a YouTube Shorts script (max 60 seconds). Hook must be in first 3 seconds. Fast-paced, punchy, ends with strong CTA.",
+  mystery:"Create a mystery/horror YouTube script with suspenseful build-up, shocking reveals and cliffhanger ending.",
+  educational:"Create an educational YouTube script that teaches clearly, uses examples and analogies, and keeps viewers engaged throughout.",
+  vlog:"Create a vlog-style YouTube script that feels personal, authentic and connects emotionally with the audience.",
+  comedy:"Create a comedy YouTube script with setup-punchline structure, relatable scenarios and maximum entertainment value."
+};
+
+var TONES_TEXT = {
+  professional:"Maintain a professional, authoritative and credible tone throughout.",
+  friendly:"Use a warm, approachable and conversational tone that feels personal and inviting.",
+  creative:"Be creative, imaginative and expressive — think outside conventional boundaries.",
+  technical:"Use precise technical language appropriate for an expert or developer audience.",
+  persuasive:"Write with conviction and urgency — make the reader feel compelled to act immediately.",
+  dramatic:"Use dramatic, impactful language that creates emotion and keeps the audience hooked.",
+  casual:"Write in a relaxed, natural tone as if talking to a close friend.",
+  humorous:"Add appropriate wit and humour to make the content engaging and memorable."
+};
+
+var FORMAT_TEXT = {
+  "detailed":"Provide a thorough, well-structured response with clear sections and in-depth explanations.",
+  "bullet":"Format your response as a clear bullet point list with concise, actionable items.",
+  "step":"Present your response as a numbered step-by-step guide that is easy to follow.",
+  "table":"Organise the information in a clear table or structured comparison format.",
+  "story":"Present this as an engaging narrative with a clear beginning, middle and end.",
+  "code":"Provide clean, well-commented code with explanations for key decisions.",
+  "short":"Keep your response concise and focused — maximum impact with minimum words.",
+  "faq":"Structure your response as a series of frequently asked questions with clear answers."
+};
+
+var LENGTH_TEXT = {
+  "short":"Keep the response brief and focused (2-3 paragraphs or equivalent).",
+  "medium":"Provide a moderately detailed response (4-6 paragraphs or equivalent).",
+  "detailed":"Give a comprehensive, in-depth response that thoroughly covers all aspects.",
+  "expert":"Provide an exhaustive, expert-level response with maximum detail, examples, edge cases and nuances."
+};
+
+var MODEL_NOTE = {
+  chatgpt:"[Optimised for ChatGPT (GPT-4o) — paste directly into chat.google.com or chat.openai.com]",
+  gemini:"[Optimised for Google Gemini — paste at gemini.google.com]",
+  claude:"[Optimised for Claude by Anthropic — paste at claude.ai — long context supported]",
+  midjourney:"[Midjourney Prompt — paste in Discord /imagine command]",
+  dalle:"[DALL-E 3 Prompt — paste in ChatGPT image generation]",
+  general:"[Works with any major AI assistant — ChatGPT, Gemini, Claude, Copilot etc.]"
+};
+
+/* ── SEO TAGS DATA ── */
+var SEO_TAGS_BASE = {
+  writing:["content writing tips","how to write better","writing for beginners","content creation","blog writing","copywriting","creative writing","writing skills","content strategy","writing tutorial","SEO writing","online writing"],
+  youtube:["youtube tips","how to grow on youtube","youtube script","youtube video ideas","youtube for beginners","video script writing","youtube strategy","how to make youtube videos","youtube shorts","viral youtube","youtube SEO","youtube growth"],
+  coding:["coding tutorial","programming for beginners","how to code","learn programming","software development","web development","coding tips","programming projects","developer tips","code examples","tech tutorial","programming language"],
+  marketing:["digital marketing","marketing strategy","online marketing","social media marketing","marketing tips","content marketing","email marketing","marketing for beginners","brand building","marketing ideas","advertising tips","growth hacking"],
+  business:["business tips","entrepreneur advice","startup ideas","business strategy","how to start a business","business growth","small business","online business","passive income","business planning","success mindset","side hustle"],
+  education:["learning tips","study tips","how to learn fast","education content","teaching methods","online learning","skill development","knowledge","educational video","learn online","self improvement","career development"],
+  image:["AI art","midjourney prompt","AI image generation","digital art","AI artwork","image prompt","stable diffusion","AI generated","art prompt","creative AI","DALL-E","generative art"],
+  seo:["SEO tips","search engine optimization","Google ranking","SEO for beginners","keyword research","on-page SEO","SEO strategy","rank higher Google","SEO tutorial","content SEO","backlink tips","website traffic"],
+  social:["social media tips","Instagram growth","viral content","social media strategy","content ideas","engagement tips","social media marketing","how to grow Instagram","TikTok tips","LinkedIn tips","social media for business","followers growth"],
+  email:["email marketing","email tips","email writing","newsletter tips","email subject lines","email campaign","inbox tips","cold email","email for business","high open rate","email strategy","subscriber growth"],
+  ideas:["creative ideas","brainstorming","innovation tips","business ideas","side hustle ideas","content ideas","startup ideas","unique ideas","problem solving","creativity tips","idea generation","thinking outside box"],
+  personal:["self improvement","personal development","motivation tips","productivity tips","mindset","life advice","success habits","personal growth","self help","morning routine","goal setting","positive thinking"]
+};
+
+/* ── GENERATE ── */
+function generatePrompt(){
+  var topic    = document.getElementById("topicInput").value.trim();
+  var audience = document.getElementById("audienceInput").value.trim();
+  var format   = document.getElementById("formatSelect").value;
+  var length   = document.getElementById("lengthSelect").value;
+  var context  = document.getElementById("contextInput").value.trim();
+  var seoOn    = document.getElementById("seoToggle").checked;
+
+  if(!topic){ showToast("Please enter your topic in Step 2!"); return; }
+
+  var ROLES = LANG==="hi" ? ROLES_HI : (LANG==="mix" ? ROLES_MIX : ROLES_EN);
+  var langNote = LANG==="hi" ? "\n\nIMPORTANT: Respond entirely in Hindi." : (LANG==="mix" ? "\n\nIMPORTANT: Respond in Hinglish (mix of Hindi and English)." : "");
+
+  var prompt = "";
+
+  if(MODEL==="midjourney"||MODEL==="dalle"){
+    /* ── IMAGE PROMPT ── */
+    var styles=["photorealistic","cinematic lighting","digital art","oil painting","watercolour","concept art","anime style","illustration","8K ultra detailed"];
+    var style = styles[Math.floor(Math.random()*styles.length)];
+    prompt = topic;
+    if(audience) prompt += ", for "+audience;
+    if(context)  prompt += ", "+context;
+    prompt += ", "+style;
+    prompt += ", highly detailed, professional quality, award winning";
+    if(TONE==="creative") prompt += ", vibrant surreal colors";
+    if(TONE==="dramatic") prompt += ", dramatic shadows, cinematic";
+    if(MODEL==="midjourney") prompt += "\n\n--v 6 --ar 16:9 --q 2 --stylize 750";
+    prompt += "\n\n"+MODEL_NOTE[MODEL];
+  } else if(CAT==="youtube"){
+    /* ── YOUTUBE PROMPT ── */
+    prompt = ROLES["youtube"]+"\n\n";
+    prompt += "## Video Type\n"+VTYPE_NOTES[VTYPE]+"\n\n";
+    prompt += "## Topic\n"+topic+"\n\n";
+    if(audience) prompt += "## Target Audience\n"+audience+"\n\n";
+    prompt += "## Tone\n"+TONES_TEXT[TONE]+"\n\n";
+    prompt += "## Script Requirements\n";
+    prompt += "- Strong hook that grabs attention immediately\n";
+    prompt += "- "+FORMAT_TEXT[format]+"\n";
+    prompt += "- "+LENGTH_TEXT[length]+"\n";
+    prompt += "- Include timestamps/sections if applicable\n";
+    prompt += "- End with a strong call-to-action (like, subscribe, comment)\n\n";
+    if(context) prompt += "## Additional Notes\n"+context+"\n\n";
+    prompt += "## Important\n";
+    prompt += "- Do not mention that you are an AI\n";
+    prompt += "- Write as if you are the YouTube creator speaking directly\n";
+    prompt += "- Make every second count — hook, value, CTA\n\n";
+    prompt += "---\n"+MODEL_NOTE[MODEL]+langNote;
+  } else {
+    /* ── GENERAL PROMPT ── */
+    prompt = ROLES[CAT]+"\n\n";
+    prompt += "## Task\n"+topic+"\n\n";
+    if(audience) prompt += "## Target Audience\n"+audience+"\n\n";
+    prompt += "## Output Format\n"+FORMAT_TEXT[format]+"\n\n";
+    prompt += "## Tone\n"+TONES_TEXT[TONE]+"\n\n";
+    prompt += "## Length\n"+LENGTH_TEXT[length]+"\n\n";
+    if(context) prompt += "## Additional Context\n"+context+"\n\n";
+    prompt += "## Rules\n";
+    prompt += "- Begin response immediately without any preamble\n";
+    prompt += "- Do not mention that you are an AI\n";
+    prompt += "- Be specific, actionable and immediately useful\n";
+    prompt += "- Use concrete examples wherever they add clarity\n\n";
+    prompt += "---\n"+MODEL_NOTE[MODEL]+langNote;
+  }
+
+  lastPrompt = prompt;
+
+  /* Update output card */
+  document.getElementById("promptText").textContent = prompt;
+  var chars = prompt.length;
+  var words = prompt.trim().split(/\s+/).filter(Boolean).length;
+  document.getElementById("charCount").textContent = chars.toLocaleString()+" characters";
+  document.getElementById("wordCount").textContent  = words.toLocaleString()+" words";
+
+  /* SEO Tags */
+  var tagsCard = document.getElementById("seoTagsCard");
+  if(seoOn){
+    var baseTags = SEO_TAGS_BASE[CAT] || SEO_TAGS_BASE["ideas"];
+    var topicWords = topic.toLowerCase().split(/\s+/).slice(0,3);
+    var extraTags = topicWords.map(function(w){ return w+" tips"; });
+    var allTags = baseTags.concat(extraTags).slice(0,20);
+    lastTags = allTags;
+    document.getElementById("tagsWrap").innerHTML = allTags.map(function(t){
+      return '<span class="tag-pill" onclick="copyTag(\''+t+'\')">'+t+'</span>';
+    }).join("");
+    tagsCard.classList.add("show");
+  } else {
+    tagsCard.classList.remove("show");
+    lastTags = [];
+  }
+
+  /* WhatsApp share button */
+  var waText = "🤖 Maine ToolsAI Pro ka Free AI Prompt Generator use kiya!\n\n"
+    +"Topic: "+topic+"\n\n"
+    +"🔗 Try it free: https://toolsaipro.in/ai-prompt-generator.html\n"
+    +"📱 All 13 free tools: https://toolsaipro.in";
+  document.getElementById("waShareBtn").href = "https://wa.me/?text="+encodeURIComponent(waText);
+
+  /* Show output */
+  var out = document.getElementById("promptOutput");
+  out.style.display = "block";
+  out.classList.remove("show");
+  void out.offsetWidth;
+  out.classList.add("show");
+
+  document.getElementById("copyBtn").textContent = "📋 Copy";
+  showToast("✨ Prompt ready! Copy karo aur use karo.");
+  out.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+
+/* ── COPY ── */
+function copyPrompt(){
+  if(!lastPrompt){showToast("Pehle prompt generate karo!");return;}
+  navigator.clipboard.writeText(lastPrompt).then(function(){
+    document.getElementById("copyBtn").textContent = "✅ Copied!";
+    setTimeout(function(){document.getElementById("copyBtn").textContent="📋 Copy";},2200);
+    showToast("✅ Prompt copied to clipboard!");
+  }).catch(function(){
+    var ta=document.createElement("textarea");ta.value=lastPrompt;
+    ta.style.cssText="position:fixed;opacity:0;";
+    document.body.appendChild(ta);ta.select();document.execCommand("copy");
+    document.body.removeChild(ta);showToast("Copied!");
+  });
+}
+function copyTags(){
+  if(!lastTags.length)return;
+  navigator.clipboard.writeText(lastTags.join(", ")).then(function(){
+    showToast("✅ All tags copied!");
+  });
+}
+function copyTag(t){
+  navigator.clipboard.writeText(t).then(function(){showToast("Tag copied: "+t);});
+}
+
+/* ── SAVE ── */
+function savePrompt(){
+  if(!lastPrompt){showToast("Pehle prompt generate karo!");return;}
+  var preview = lastPrompt.substring(0,75)+"…";
+  savedPrompts.unshift({text:lastPrompt,preview:preview});
+  if(savedPrompts.length>8) savedPrompts=savedPrompts.slice(0,8);
+  renderSaved();
+  showToast("💾 Prompt saved!");
+}
+function renderSaved(){
+  var list=document.getElementById("savedList");
+  if(!savedPrompts.length){
+    list.innerHTML='<div class="saved-empty">Koi saved prompt nahi — generate karo aur save karo.</div>';return;
+  }
+  list.innerHTML=savedPrompts.map(function(p,i){
+    return '<div class="saved-item">'
+      +'<span class="saved-text">'+p.preview+'</span>'
+      +'<button class="saved-copy-btn" onclick="copySaved('+i+')">📋</button>'
+      +'</div>';
+  }).join("");
+}
+function copySaved(i){
+  navigator.clipboard.writeText(savedPrompts[i].text).then(function(){showToast("Copied!");});
+}
+function clearSaved(){savedPrompts=[];renderSaved();showToast("Cleared.");}
+
+function clearAll(){
+  document.getElementById("topicInput").value="";
+  document.getElementById("audienceInput").value="";
+  document.getElementById("contextInput").value="";
+  var out=document.getElementById("promptOutput");
+  out.style.display="none";out.classList.remove("show");
+  document.getElementById("seoTagsCard").classList.remove("show");
+  lastPrompt="";lastTags=[];showToast("Cleared.");
+}
+
+/* ── TOAST ── */
+function showToast(msg){
+  var t=document.getElementById("toast");
+  t.textContent=msg;t.classList.add("show");
+  clearTimeout(t._tid);
+  t._tid=setTimeout(function(){t.classList.remove("show");},2400);
+}
+</script>
+</body>
+</html>
