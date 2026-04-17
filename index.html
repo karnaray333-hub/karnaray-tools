@@ -304,46 +304,7 @@ footer{position:relative;z-index:1;margin-top:56px;border-top:1px solid rgba(255
   </div>
 </footer>
 
-<script>
-// LIVE SEARCH
-var searchInp = document.getElementById("searchInp");
-var cards = document.querySelectorAll(".tc");
-var noResults = document.getElementById("noResults");
-var toolCount = document.getElementById("toolCount");
-var searchQuery = document.getElementById("searchQuery");
-
-searchInp.addEventListener("input", function() {
-  var q = this.value.toLowerCase().trim();
-  var visible = 0;
-  cards.forEach(function(card) {
-    var name = (card.getAttribute("data-name") || "").toLowerCase();
-    var title = (card.querySelector(".tt") || {}).textContent || "";
-    var desc = (card.querySelector(".td") || {}).textContent || "";
-    var hay = name + " " + title.toLowerCase() + " " + desc.toLowerCase();
-    if (!q || hay.indexOf(q) !== -1) {
-      card.style.display = "";
-      visible++;
-    } else {
-      card.style.display = "none";
-    }
-  });
-  if (visible === 0) {
-    noResults.style.display = "block";
-    searchQuery.textContent = this.value;
-    toolCount.textContent = "0 tools";
-  } else {
-    noResults.style.display = "none";
-    toolCount.textContent = visible + (q ? " result" + (visible > 1 ? "s" : "") : " tools");
-  }
-});
-
-// Clear search on Escape
-searchInp.addEventListener("keydown", function(e) {
-  if (e.key === "Escape") {
-    this.value = "";
-    this.dispatchEvent(new Event("input"));
-  }
-});
-</script>
+<script src="/tools-data.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>
