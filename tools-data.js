@@ -218,8 +218,21 @@ var TOOLS_DATA = [
     color: "#06b6d4",
     colorRgb: "6,182,212",
     status: "hidden"  /* 🔒 Change to "active" when ready */
+  },
+   {
+    id: 15,
+    title: "YouTube Thumbnail Downloader",
+    desc: "Download high-quality YouTube thumbnails instantly.",
+    desclong: "Easily fetch and download HD, Full HD, and custom thumbnails from any YouTube video in one click.",
+    link: "/youtube-thumbnail-downloader.html",
+    icon: "<svg>...</svg>",
+    emoji: "▶️",
+    badge: "new",
+    cat: "img",
+    color: "#ff0000",
+    colorRgb: "255,0,0",
+    status: "active"
   }
-
 ];
 
 /* ─────────────────────────────────────
