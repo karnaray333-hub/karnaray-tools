@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJVC95H1FK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -186,49 +185,6 @@ input:checked+.toggle-slider:before{transform:translateX(18px);}
 .step-title{font-size:13px;font-weight:800;color:#fff;margin-bottom:5px;}
 .step-desc{font-size:11px;color:var(--mu);line-height:1.6;}
 
-/* ══ 13 TOOLS GRID ══ */
-.tools-section{max-width:860px;margin:0 auto 16px;padding:0 24px;position:relative;z-index:1;}
-.tools-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
-.tools-section-title{font-size:13px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:1.2px;}
-.tools-grid-13{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
-.tc{background:rgba(28,28,40,0.85);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:18px 14px;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;transition:all 0.28s cubic-bezier(0.34,1.2,0.64,1);position:relative;overflow:hidden;text-align:center;}
-.tc::before{content:"";position:absolute;inset:0;border-radius:16px;opacity:0;transition:opacity 0.25s;pointer-events:none;}
-.tc:hover{transform:translateY(-3px);}
-.tc:hover::before{opacity:1;}
-.tc.pdf{border-color:rgba(255,101,132,0.12);}
-.tc.pdf:hover{border-color:rgba(255,101,132,0.5);box-shadow:0 8px 24px rgba(255,101,132,0.15);}
-.tc.pdf::before{background:radial-gradient(ellipse at 50% 0%,rgba(255,101,132,0.1),transparent 70%);}
-.tc.img{border-color:rgba(6,182,212,0.12);}
-.tc.img:hover{border-color:rgba(6,182,212,0.5);box-shadow:0 8px 24px rgba(6,182,212,0.15);}
-.tc.img::before{background:radial-gradient(ellipse at 50% 0%,rgba(6,182,212,0.1),transparent 70%);}
-.tc.tool{border-color:rgba(108,99,255,0.12);}
-.tc.tool:hover{border-color:rgba(108,99,255,0.5);box-shadow:0 8px 24px rgba(108,99,255,0.15);}
-.tc.tool::before{background:radial-gradient(ellipse at 50% 0%,rgba(108,99,255,0.1),transparent 70%);}
-.tc.calc{border-color:rgba(67,233,123,0.12);}
-.tc.calc:hover{border-color:rgba(67,233,123,0.5);box-shadow:0 8px 24px rgba(67,233,123,0.15);}
-.tc.calc::before{background:radial-gradient(ellipse at 50% 0%,rgba(67,233,123,0.1),transparent 70%);}
-.tc.hlth{border-color:rgba(247,151,30,0.12);}
-.tc.hlth:hover{border-color:rgba(247,151,30,0.5);box-shadow:0 8px 24px rgba(247,151,30,0.15);}
-.tc.hlth::before{background:radial-gradient(ellipse at 50% 0%,rgba(247,151,30,0.1),transparent 70%);}
-.tc.ai{border-color:rgba(167,139,250,0.2);background:rgba(167,139,250,0.06);}
-.tc.ai:hover{border-color:rgba(167,139,250,0.6);box-shadow:0 8px 24px rgba(167,139,250,0.2);}
-.tc.ai::before{background:radial-gradient(ellipse at 50% 0%,rgba(167,139,250,0.12),transparent 70%);}
-.tc-icon-wrap{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;transition:transform 0.25s;}
-.tc:hover .tc-icon-wrap{transform:scale(1.1) rotate(-3deg);}
-.ic-pdf{background:rgba(255,101,132,0.14);border:1px solid rgba(255,101,132,0.25);}
-.ic-img{background:rgba(6,182,212,0.14);border:1px solid rgba(6,182,212,0.25);}
-.ic-tool{background:rgba(108,99,255,0.14);border:1px solid rgba(108,99,255,0.25);}
-.ic-calc{background:rgba(67,233,123,0.14);border:1px solid rgba(67,233,123,0.25);}
-.ic-hlth{background:rgba(247,151,30,0.14);border:1px solid rgba(247,151,30,0.25);}
-.ic-ai{background:rgba(167,139,250,0.16);border:1px solid rgba(167,139,250,0.3);}
-.tc-name{font-size:10.5px;font-weight:700;color:#c4c4d4;line-height:1.4;transition:color 0.2s;}
-.tc:hover .tc-name{color:#fff;}
-.tc-badge{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;padding:2px 8px;border-radius:20px;}
-.badge-free{background:rgba(67,233,123,0.12);color:#43e97b;border:1px solid rgba(67,233,123,0.22);}
-.badge-new{background:rgba(247,151,30,0.12);color:#f7971e;border:1px solid rgba(247,151,30,0.22);}
-.badge-ai{background:rgba(167,139,250,0.15);color:var(--ai);border:1px solid rgba(167,139,250,0.3);}
-.badge-pro{background:rgba(108,99,255,0.12);color:#8b83ff;border:1px solid rgba(108,99,255,0.22);}
-
 /* ══ SEO BLOCKS ══ */
 .seo-wrap{max-width:860px;margin:0 auto 0;padding:0 24px;position:relative;z-index:1;}
 .seo-block{background:rgba(28,28,40,0.72);backdrop-filter:blur(12px);border:1px solid var(--bor);border-radius:20px;padding:30px;margin-bottom:14px;}
@@ -242,6 +198,49 @@ input:checked+.toggle-slider:before{transform:translateX(18px);}
 .faq-item:last-child{border-bottom:none;padding-bottom:0;}
 .faq-q{font-size:13px;font-weight:700;color:#fff;margin-bottom:6px;}
 .faq-a{font-size:12px;color:var(--mu);line-height:1.75;}
+
+
+/* ─────────────────────────────────────────
+   OTHER FREE TOOLS — MASTER STYLES (Added from Age Calculator)
+───────────────────────────────────────── */
+.oft-section { max-width: 760px; margin: 0 auto 48px; padding: 0 24px; position: relative; z-index: 1; }
+.oft-card-wrap { background: rgba(28,28,40,0.82); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.07); border-radius: 22px; padding: 28px 24px 22px; box-shadow: 0 8px 40px rgba(0,0,0,0.35); }
+.oft-header { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.oft-title { font-size: 18px; font-weight: 800; color: #fff; font-family: "Plus Jakarta Sans", sans-serif; }
+.oft-sub { font-size: 12px; color: #6b6b80; margin-bottom: 20px; font-family: "Plus Jakarta Sans", sans-serif; line-height: 1.5; }
+.oft-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.oft-tool-card { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 8px; padding: 16px 10px 14px; background: rgba(22,22,31,0.88); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; text-decoration: none; transition: all 0.25s cubic-bezier(0.34,1.2,0.64,1); position: relative; overflow: hidden; }
+.oft-tool-card::before { content: ""; position: absolute; inset: 0; border-radius: 14px; opacity: 0; transition: opacity 0.25s; }
+.oft-tool-card:hover { transform: translateY(-3px); }
+.oft-tool-card:hover::before { opacity: 1; }
+.oft-tool-card.pdf:hover    { border-color:rgba(255,101,132,0.5); box-shadow:0 8px 24px rgba(255,101,132,0.18),0 0 0 1px rgba(255,101,132,0.15); }
+.oft-tool-card.pdf::before  { background:radial-gradient(ellipse at 50% 0%,rgba(255,101,132,0.13),transparent 70%); }
+.oft-tool-card.img:hover    { border-color:rgba(6,182,212,0.5);   box-shadow:0 8px 24px rgba(6,182,212,0.18),  0 0 0 1px rgba(6,182,212,0.15); }
+.oft-tool-card.img::before  { background:radial-gradient(ellipse at 50% 0%,rgba(6,182,212,0.13),  transparent 70%); }
+.oft-tool-card.tool:hover   { border-color:rgba(108,99,255,0.5);  box-shadow:0 8px 24px rgba(108,99,255,0.18), 0 0 0 1px rgba(108,99,255,0.15); }
+.oft-tool-card.tool::before { background:radial-gradient(ellipse at 50% 0%,rgba(108,99,255,0.13), transparent 70%); }
+.oft-tool-card.calc:hover   { border-color:rgba(67,233,123,0.5);  box-shadow:0 8px 24px rgba(67,233,123,0.18), 0 0 0 1px rgba(67,233,123,0.15); }
+.oft-tool-card.calc::before { background:radial-gradient(ellipse at 50% 0%,rgba(67,233,123,0.13), transparent 70%); }
+.oft-tool-card.hlth:hover   { border-color:rgba(247,151,30,0.5);  box-shadow:0 8px 24px rgba(247,151,30,0.18), 0 0 0 1px rgba(247,151,30,0.15); }
+.oft-tool-card.hlth::before { background:radial-gradient(ellipse at 50% 0%,rgba(247,151,30,0.13), transparent 70%); }
+.oft-icon-wrap { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform 0.25s; }
+.oft-tool-card:hover .oft-icon-wrap { transform: scale(1.1); }
+.oft-icon-wrap.c-pdf  { background:rgba(255,101,132,0.14); border:1px solid rgba(255,101,132,0.25); }
+.oft-icon-wrap.c-img  { background:rgba(6,182,212,0.14);  border:1px solid rgba(6,182,212,0.25); }
+.oft-icon-wrap.c-tool { background:rgba(108,99,255,0.14);  border:1px solid rgba(108,99,255,0.25); }
+.oft-icon-wrap.c-calc { background:rgba(67,233,123,0.14);  border:1px solid rgba(67,233,123,0.25); }
+.oft-icon-wrap.c-hlth { background:rgba(247,151,30,0.14);  border:1px solid rgba(247,151,30,0.25); }
+.oft-icon-wrap svg { width: 22px; height: 22px; }
+.oft-tool-name { font-size: 11px; font-weight: 700; color: #c4c4d4; text-align: center; line-height: 1.45; font-family: "Plus Jakarta Sans", sans-serif; transition: color 0.2s; word-break: break-word; }
+.oft-tool-card:hover .oft-tool-name { color: #fff; }
+.oft-badge { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 2px 8px; border-radius: 20px; }
+.oft-badge.free { background:rgba(67,233,123,0.12); color:#43e97b; border:1px solid rgba(67,233,123,0.22); }
+.oft-badge.new  { background:rgba(247,151,30,0.12);  color:#f7971e; border:1px solid rgba(247,151,30,0.22); }
+.oft-badge.pro  { background:rgba(108,99,255,0.12);  color:#8b83ff; border:1px solid rgba(108,99,255,0.22); }
+.oft-footer { text-align: center; margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+.oft-view-all { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #06b6d4; text-decoration: none; font-family: "Plus Jakarta Sans", sans-serif; transition: gap 0.2s, color 0.2s; }
+.oft-view-all:hover { color: #fff; gap: 10px; }
+
 
 /* ══ FOOTER ══ */
 footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44px 24px 24px;margin-top:60px;position:relative;z-index:1;}
@@ -264,7 +263,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
 
 /* ══ RESPONSIVE ══ */
 @media(max-width:860px){
-  .tools-grid-13{grid-template-columns:repeat(3,1fr);}
   .how-grid{grid-template-columns:repeat(2,1fr);}
   .footer-grid{grid-template-columns:1fr;}
 }
@@ -273,17 +271,21 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
   .scard{padding:20px 16px;}
   .form-row{grid-template-columns:1fr;}
   .cat-grid{grid-template-columns:repeat(3,1fr);}
-  .tools-grid-13{grid-template-columns:repeat(2,1fr);}
   .how-grid{grid-template-columns:1fr;}
   .share-row{flex-direction:column;}
   .wa-btn,.save-btn,.clr-btn{justify-content:center;}
+  .oft-grid { grid-template-columns: repeat(2, 1fr); gap: 9px; }
+  .oft-section { padding: 0 14px; }
+  .oft-card-wrap { padding: 20px 14px 18px; }
+  .oft-icon-wrap { width: 40px; height: 40px; border-radius: 10px; }
+  .oft-icon-wrap svg { width: 20px; height: 20px; }
+  .oft-tool-name { font-size: 10.5px; }
 }
 </style>
 </head>
 <body>
 <div class="toast" id="toast"></div>
 
-<!-- ══ NAV ══ -->
 <nav>
   <a class="logo" href="/">Tools<span>AI</span><em>Pro</em></a>
   <div class="nav-links">
@@ -295,7 +297,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
   </div>
 </nav>
 
-<!-- ══ HERO ══ -->
 <div class="page-hero">
   <div class="breadcrumb"><a href="/">Home</a> › AI Prompt Generator</div>
   <div class="tool-badge">🤖 NEW — AI Tool #13</div>
@@ -303,7 +304,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
   <p>ChatGPT, YouTube, Midjourney, Gemini ke liye powerful prompts banao — Hindi & English support, SEO tags aur video type selector ke saath. No signup required.</p>
 </div>
 
-<!-- ══ TOOL ══ -->
 <div class="tool-wrap">
 <div class="scard">
   <div class="sh">
@@ -314,7 +314,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     </div>
   </div>
 
-  <!-- LANGUAGE -->
   <span class="sec-label">Language / भाषा</span>
   <div class="lang-toggle" style="margin-bottom:22px;">
     <button class="lang-btn active" onclick="setLang('en',this)">🇬🇧 English</button>
@@ -322,7 +321,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     <button class="lang-btn" onclick="setLang('mix',this)">🔀 Hinglish</button>
   </div>
 
-  <!-- CATEGORY -->
   <span class="sec-label" id="label-cat">Step 1 — Choose Category</span>
   <div class="cat-grid" id="catGrid">
     <div class="cat-card active" onclick="selectCat(this,'writing')"><span class="cat-icon">✍️</span><span class="cat-name">Writing</span></div>
@@ -339,7 +337,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     <div class="cat-card" onclick="selectCat(this,'personal')"><span class="cat-icon">🙋</span><span class="cat-name">Personal</span></div>
   </div>
 
-  <!-- YOUTUBE VIDEO TYPE — shows only when YouTube selected -->
   <div id="ytTypeWrap" style="display:none;margin-bottom:18px;">
     <span class="sec-label">YouTube Video Type</span>
     <div class="vtype-row">
@@ -352,7 +349,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     </div>
   </div>
 
-  <!-- TOPIC + AUDIENCE -->
   <span class="sec-label" id="label-step2">Step 2 — Describe Your Goal</span>
   <div class="form-row">
     <div class="form-group">
@@ -390,7 +386,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     </div>
   </div>
 
-  <!-- TONE -->
   <span class="sec-label" id="label-step3">Step 3 — Select Tone</span>
   <div class="chip-row">
     <button class="chip active" onclick="selectTone(this,'professional')">💼 Professional</button>
@@ -403,7 +398,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     <button class="chip" onclick="selectTone(this,'humorous')">😄 Humorous</button>
   </div>
 
-  <!-- AI MODEL -->
   <span class="sec-label" id="label-step4">Step 4 — Target AI Model</span>
   <div class="chip-row" style="margin-bottom:20px;">
     <button class="mchip active" onclick="selectModel(this,'chatgpt')">🟢 ChatGPT</button>
@@ -414,7 +408,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     <button class="mchip" onclick="selectModel(this,'general')">✨ Any AI</button>
   </div>
 
-  <!-- SEO TAGS TOGGLE -->
   <div class="seo-toggle-wrap">
     <div>
       <div class="seo-toggle-label">🏷️ Generate SEO Tags / Keywords</div>
@@ -426,17 +419,13 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     </label>
   </div>
 
-  <!-- EXTRA CONTEXT -->
   <span class="sec-label">Extra Context (Optional)</span>
   <textarea class="form-textarea" id="contextInput" placeholder="Koi specific requirement, examples ya additional details likho..." style="margin-bottom:20px;"></textarea>
 
-  <!-- GENERATE -->
   <button class="gen-btn" onclick="generatePrompt()">✨ Generate AI Prompt</button>
 
-  <!-- ══ OUTPUT ══ -->
   <div class="prompt-output" id="promptOutput">
 
-    <!-- PROMPT CARD -->
     <div class="output-card">
       <div class="output-header">
         <span class="output-title">✨ Generated Prompt</span>
@@ -452,7 +441,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
       </div>
     </div>
 
-    <!-- SEO TAGS -->
     <div class="seo-tags-card" id="seoTagsCard">
       <div class="seo-tags-header">
         <span class="seo-tags-title">🏷️ SEO Tags / YouTube Keywords</span>
@@ -461,7 +449,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
       <div class="tags-wrap" id="tagsWrap"></div>
     </div>
 
-    <!-- SHARE + SAVE + CLEAR -->
     <div class="share-row">
       <a class="wa-btn" id="waShareBtn" href="#" target="_blank" rel="noopener">
         <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -471,10 +458,7 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
       <button class="clr-btn" onclick="clearAll()">✕ Clear All</button>
     </div>
 
-  </div><!-- /promptOutput -->
-
-  <!-- SAVED PROMPTS -->
-  <div class="saved-wrap">
+  </div><div class="saved-wrap">
     <div class="saved-header">
       <span class="saved-title-txt">💾 Saved Prompts (Session)</span>
       <button class="saved-clear-btn" onclick="clearSaved()">Clear All</button>
@@ -484,11 +468,7 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     </div>
   </div>
 
-</div><!-- /scard -->
-</div><!-- /tool-wrap -->
-
-<!-- ══ HOW TO USE ══ -->
-<div class="how-section">
+</div></div><div class="how-section">
   <div class="how-card">
     <div class="how-title">📖 How to Use — Step by Step Guide</div>
     <div class="how-grid">
@@ -531,14 +511,8 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     </div>
   </div>
 </div>
-<section class="tools-section">
-    <div class="tools-section-header">
-        <span class="tools-section-title">Other Free Tools</span>
-    </div>
-    <div class="oft-grid" id="oftGrid"></div>
-</section>
 
-<!-- ══ SEO ══ -->
+
 <div class="seo-wrap" style="margin-top:16px;">
 
   <div class="seo-block">
@@ -582,7 +556,21 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
 
 </div>
 
-<!-- ══ FOOTER ══ -->
+<div class="oft-section">
+  <div class="oft-card-wrap">
+    <div class="oft-header">
+      <span style="font-size:22px;">🛠️</span>
+      <span class="oft-title">Other Free Tools</span>
+    </div>
+    <p class="oft-sub">All 13 tools — no signup required, no files uploaded, 100% private &amp; browser-based.</p>
+
+    <div class="oft-grid" id="oftGrid"></div>
+
+    <div class="oft-footer">
+      <a class="oft-view-all" href="tools-hub.html">View All 13 Free Tools &nbsp;→</a>
+    </div>
+  </div>
+</div>
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -606,7 +594,6 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
   </div>
 </footer>
 
-<!-- ══ JAVASCRIPT ══ -->
 <script>
 /* ── STATE ── */
 var LANG  = "en";
@@ -928,7 +915,7 @@ function showToast(msg){
   t._tid=setTimeout(function(){t.classList.remove("show");},2400);
 }
 </script>
-<script src="/tools-data.js"></script>
-<script src="/script.js"></script>
+<script src="tools-data.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
