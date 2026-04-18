@@ -531,94 +531,12 @@ footer{background:rgba(13,13,20,0.98);border-top:1px solid var(--bor);padding:44
     </div>
   </div>
 </div>
-
-<!-- ══ 13 TOOLS GRID ══ -->
-<div class="tools-section">
-  <div class="tools-section-header">
-    <span class="tools-section-title">🛠️ All 13 Free Tools</span>
-  </div>
-  <div class="tools-grid-13">
-
-    <a class="tc pdf" href="/pdf-merger.html">
-      <div class="tc-icon-wrap ic-pdf">📄</div>
-      <span class="tc-name">Free PDF Merger Online</span>
-      <span class="tc-badge badge-free">Free</span>
-    </a>
-
-    <a class="tc pdf" href="/images-to-pdf.html">
-      <div class="tc-icon-wrap ic-pdf">🖼️</div>
-      <span class="tc-name">Images to PDF Converter</span>
-      <span class="tc-badge badge-free">Free</span>
-    </a>
-
-    <a class="tc img" href="/image-compressor.html">
-      <div class="tc-icon-wrap ic-img">🗜️</div>
-      <span class="tc-name">Image Compressor Online</span>
-      <span class="tc-badge badge-free">Free</span>
-    </a>
-
-    <a class="tc img" href="/webp-to-jpg.html">
-      <div class="tc-icon-wrap ic-img">🔄</div>
-      <span class="tc-name">All-in-One Image Converter</span>
-      <span class="tc-badge badge-free">Free</span>
-    </a>
-
-    <a class="tc img" href="/qr-generator.html">
-      <div class="tc-icon-wrap ic-img">📲</div>
-      <span class="tc-name">Universal QR Code Generator</span>
-      <span class="tc-badge badge-free">Free</span>
-    </a>
-
-    <a class="tc tool" href="/color-picker.html">
-      <div class="tc-icon-wrap ic-tool">🎨</div>
-      <span class="tc-name">Color Picker & Palette</span>
-      <span class="tc-badge badge-pro">Pro</span>
-    </a>
-
-    <a class="tc tool" href="/password-generator.html">
-      <div class="tc-icon-wrap ic-tool">🔐</div>
-      <span class="tc-name">Password Generator</span>
-      <span class="tc-badge badge-pro">Pro</span>
-    </a>
-
-    <a class="tc tool" href="/word-counter.html">
-      <div class="tc-icon-wrap ic-tool">📝</div>
-      <span class="tc-name">Word & Character Counter</span>
-      <span class="tc-badge badge-pro">Pro</span>
-    </a>
-
-    <a class="tc calc" href="/age-calculator.html">
-      <div class="tc-icon-wrap ic-calc">🎂</div>
-      <span class="tc-name">Age Calculator Online</span>
-      <span class="tc-badge badge-pro">Pro</span>
-    </a>
-
-    <a class="tc calc" href="/gst-calculator.html">
-      <div class="tc-icon-wrap ic-calc">🧾</div>
-      <span class="tc-name">GST Calculator Online</span>
-      <span class="tc-badge badge-pro">Pro</span>
-    </a>
-
-    <a class="tc hlth" href="/bmi-calculator.html">
-      <div class="tc-icon-wrap ic-hlth">💪</div>
-      <span class="tc-name">BMI Calculator Online</span>
-      <span class="tc-badge badge-new">New</span>
-    </a>
-
-    <a class="tc hlth" href="/unit-converter.html">
-      <div class="tc-icon-wrap ic-hlth">🔁</div>
-      <span class="tc-name">Unit Converter Pro</span>
-      <span class="tc-badge badge-new">New</span>
-    </a>
-
-    <a class="tc ai" href="/ai-prompt-generator.html">
-      <div class="tc-icon-wrap ic-ai">🤖</div>
-      <span class="tc-name">AI Prompt Generator</span>
-      <span class="tc-badge badge-ai">AI</span>
-    </a>
-
-  </div>
-</div>
+<section class="tools-section">
+    <div class="tools-section-header">
+        <span class="tools-section-title">Other Free Tools</span>
+    </div>
+    <div class="oft-grid" id="oftGrid"></div>
+</section>
 
 <!-- ══ SEO ══ -->
 <div class="seo-wrap" style="margin-top:16px;">
@@ -1010,5 +928,7 @@ function showToast(msg){
   t._tid=setTimeout(function(){t.classList.remove("show");},2400);
 }
 </script>
+<script src="/tools-data.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>
