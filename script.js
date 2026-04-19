@@ -131,12 +131,20 @@
     if (PAGE === "tool") {
       var oftGrid = document.getElementById("oftGrid");
       if (!oftGrid) return;
+      
       var current = window.location.pathname;
       var others  = tools.filter(function (t) { return t.link !== current && !current.endsWith(t.link.replace("/", "")); });
       oftGrid.innerHTML = others.map(oftCard).join("");
 
+      /* Update "View All" button text automatically */
       var va = document.querySelector(".oft-view-all");
       if (va) va.innerHTML = "View All " + tools.length + " Free Tools &nbsp;→";
+
+      /* Update "All 12 tools..." subtitle text automatically */
+      var subText = document.querySelector(".oft-sub");
+      if (subText) {
+        subText.textContent = "All " + tools.length + " tools — no signup required, no files uploaded, 100% private & browser-based.";
+      }
     }
   }
 
@@ -269,11 +277,11 @@
       ".oft-icon-wrap.c-ai { background:rgba(167,139,250,0.14); border:1px solid rgba(167,139,250,0.25); }",
       ".btn-ai { background:linear-gradient(135deg,#a78bfa,#06b6d4); color:#fff; box-shadow:0 4px 14px rgba(167,139,250,0.35); }",
       ".btn-ai:hover { box-shadow:0 6px 22px rgba(167,139,250,0.55); }",
-      /* YouTube Tool Custom CSS (Added here!) */
+      /* YouTube Tool Custom CSS */
       ".oft-tool-card.yt:hover { border-color:rgba(255,68,68,0.5); box-shadow:0 8px 24px rgba(255,68,68,0.18); }",
       ".oft-tool-card.yt::before { background:radial-gradient(ellipse at 50% 0%,rgba(255,68,68,0.13),transparent 70%); }",
       ".oft-icon-wrap.c-yt { background:rgba(255,68,68,0.15); border:1px solid rgba(255,68,68,0.3); }",
-      ".btn-yt { background:linear-gradient(135deg,#ff4444,#cc0000); color:#fff; box-shadow:0 4px 14px rgba(255,68,68,0.35); border:none; border-radius:6px; padding:8px 16px; font-weight:600; }",
+      ".btn-yt { background:linear-gradient(135deg,#ff4444,#cc0000); color:#fff; box-shadow:0 4px 14px rgba(255,68,68,0.35); border:none; border-radius:6px; padding:8px 16px; font-weight:600; text-decoration:none; display:inline-block; }",
       ".btn-yt:hover { box-shadow:0 6px 22px rgba(255,68,68,0.55); }"
     ].join("\n");
 
