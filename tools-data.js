@@ -223,14 +223,13 @@ var TOOLS_DATA = [
     id: 15,
     title: "YouTube Thumbnail Downloader",
     desc: "Download high-quality YouTube thumbnails instantly.",
-    desclong: "Easily fetch and download HD, Full HD, and custom thumbnails from any YouTube video in one click.",
+    descLong: "Easily fetch and download HD, Full HD, and custom thumbnails from any YouTube video in one click.",
     link: "/youtube-thumbnail-downloader.html",
-    icon: "<svg>...</svg>",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><polygon points="10 9 16 12 10 15 10 9" fill="currentColor" stroke="none"/></svg>`,
     emoji: "▶️",
     badge: "new",
-    cat: "img",
+    cat: "yt",
     color: "#ff0000",
-    colorRgb: "255,0,0",
     status: "active"
   }
 ];
