@@ -231,7 +231,21 @@ var TOOLS_DATA = [
     cat: "yt",
     color: "#ff0000",
     status: "active"
-  }
+  },
+    {
+    id: 16,
+    title: "ID Card Merger",
+    desc: "Merge front and back sides of Aadhar or ID cards instantly.",
+    descLong: "Merge two sides of your Aadhar card, PAN card or any ID document into a single, print-ready image or A4 sheet. 100% private, no server upload required.",
+    link: "/id-card-merger.html",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><circle cx="8.5" cy="11.5" r="2.5"/><path d="M12 17c0-2.2-1.8-4-4-4s-4 1.8-4 4"/><line x1="14" y1="10" x2="20" y2="10"/><line x1="14" y1="14" x2="20" y2="14"/></svg>`,
+    emoji: "🪪",
+    badge: "new",
+    cat: "img",
+    color: "#ff6584",
+    status: "active"
+    }
+  
 ];
 
 /* ─────────────────────────────────────
