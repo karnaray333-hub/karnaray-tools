@@ -207,17 +207,16 @@ var TOOLS_DATA = [
   },
   {
     id: 14,
-    title: "Pro Passport Photo Maker",
-    desc: "Create passport-size photos for any country, instantly.",
-    descLong: "Resize, crop and prepare passport photos for India, USA, UK and 50+ countries. White background removal, print layout included. 100% free.",
-    link: "/passport-photo.html",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0 1 10 0v1"/></svg>`,
-    emoji: "📷",
+    title: "PDF Split Tool",
+    desc: "Split large PDFs into single pages or ranges instantly.",
+    descLong: "Securely split your PDF files locally in your browser. No server uploads, no data storage, 100% private.",
+    link: "/pdf-splitter.html",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+    emoji: "📄",
     badge: "new",
-    cat: "img",
-    color: "#06b6d4",
-    colorRgb: "6,182,212",
-    status: "hidden"  /* 🔒 Change to "active" when ready */
+    cat: "pdf",
+    color: "#ff6584",
+    status: "active"
   },
    {
     id: 15,
