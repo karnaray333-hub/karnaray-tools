@@ -240,6 +240,19 @@ var TOOLS_DATA = [
     cat: "yt",
     color: "#ff0000",
     status: "active"
+  },
+  {
+    id: 18,
+    title: "Naya Tool Ka Naam",
+    desc: "Short description yahan likho.",
+    desclong: "Poora description yahan likho.",
+    link: "naya-tool.html",
+    icon: `<svg... (yahan apna svg paste karo) ...</svg>`,
+    emoji: "🛠️",
+    badge: "new",
+    cat: "tool",
+    color: "#6c63ff",
+    status: "active"
   }
 ];
 
