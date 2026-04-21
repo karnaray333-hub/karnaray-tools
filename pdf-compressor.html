@@ -589,22 +589,18 @@ function compressPdf(){
 
 /* ═══════════════════════════════════════════════
    CORE COMPRESSION PIPELINE
-   1. Load PDF with pdf.js
-   2. Render each page to offscreen canvas
-   3. Export canvas as JPEG (quality = compLevel)
-   4. Embed JPEG into new pdf-lib document
-   5. Return compressed PDF bytes
 ═══════════════════════════════════════════════ */
 async function runCompression(){
   var origSize = pdfFileBytes.length;
   var quality  = QUALITY[compLevel];
   var scale    = SCALE[compLevel];
+  var pdfJs    = null; // Declare here for cleanup
 
   try {
-    /* ── STEP 1: Load with pdf.js ── */
+    /* ── STEP 1: Load with pdf.js (FIX: .slice(0) prevents buffer detachment!) ── */
     setProg(10, "Parsing PDF structure...");
-    var loadingTask = pdfjsLib.getDocument({ data: pdfFileBytes });
-    var pdfJs = await loadingTask.promise;
+    var loadingTask = pdfjsLib.getDocument({ data: pdfFileBytes.slice(0) });
+    pdfJs = await loadingTask.promise;
     var numPages = pdfJs.numPages;
 
     /* ── STEP 2 & 3: Render pages → JPEG ── */
@@ -688,6 +684,11 @@ async function runCompression(){
     alert("⚠️ Compression failed: " + err.message +
           "\n\nThis PDF may be password-protected or use unsupported features. " +
           "Please try a different file.");
+  } finally {
+    /* FIX: Cleanup worker memory so it doesn't leak on next run */
+    if (pdfJs) {
+      pdfJs.destroy();
+    }
   }
 }
 
