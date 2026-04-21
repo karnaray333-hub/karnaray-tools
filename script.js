@@ -298,7 +298,10 @@
     injectCSS();
     injectCards();
     injectFooter();
-  }
+  document.querySelectorAll(".tool-count").forEach(function(el){ 
+            el.textContent = ACTIVE_TOOLS.length; 
+        });
+    }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
