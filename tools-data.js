@@ -253,7 +253,20 @@ var TOOLS_DATA = [
     cat: "pdf",
     color: "#ff6584",
     status: "active"
-  }
+  },
+  {
+    id: 19,
+    title: "PDF to JPG Converter",
+    desc: "Convert PDF pages to high-quality JPG images instantly.",
+    descLong: "Extract every page of your PDF and save them as individual high-resolution JPG images directly in your browser. No signup, no server uploads.",
+    link: "/pdf-to-jpg.html",
+    cat: "pdf",
+    emoji: "🖼️",
+    badge: "new",
+    color: "#3b82f6",
+    status: "active"
+ }
+
 ];
 
 /* ─────────────────────────────────────
