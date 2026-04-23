@@ -2,15 +2,6 @@
  * ToolsAI Pro — Master Script
  * ============================
  * Auto-detects page type → renders correct cards + footer.
- *
- * Page types detected:
- * "home"  → index.html  → simple .tc cards (4-col grid)
- * "hub"   → tools-hub.html / blog.html / tools-hub.html → .tool-card with "Use Tool" button
- * "tool"  → any other page  → oft-grid (Other Free Tools section)
- *
- * Include in every page AFTER tools-data.js:
- * <script src="/tools-data.js"></script>
- * <script src="/script.js"></script>
  */
 
 (function () {
@@ -86,7 +77,12 @@
 
   /* ── 3c. OFT card (Other Free Tools grid) ── */
   function oftCard(tool) {
-    var iconColoured = tool.icon.replace('stroke="currentColor"', 'stroke="' + tool.color + '"').replace('fill="currentColor"', 'fill="' + tool.color + '"');
+    // BUG FIX: Agar icon missing hai, toh script crash nahi hoga. Default icon use karega.
+    var defaultIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>';
+    var rawIcon = tool.icon || defaultIcon;
+    
+    var iconColoured = rawIcon.replace('stroke="currentColor"', 'stroke="' + tool.color + '"').replace('fill="currentColor"', 'fill="' + tool.color + '"');
+    
     return (
       '<a class="oft-tool-card ' + tool.cat + '" href="' + tool.link + '">' +
         '<div class="oft-icon-wrap c-' + tool.cat + '">' + iconColoured + '</div>' +
