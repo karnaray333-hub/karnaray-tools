@@ -265,8 +265,18 @@ var TOOLS_DATA = [
     badge: "new",
     color: "#3b82f6",
     status: "active"
- }
-
+ },
+  {
+    title: "Free PDF Unlocker",
+    desc: "Remove password protection from PDF files instantly.",
+    descLong: "Securely unlock protected PDFs and remove printing/editing restrictions directly in your browser without uploading files to any server.",
+    link: "pdf-unlock.html", 
+    cat: "pdf",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>',
+    emoji: "🔓",
+    badge: "new",
+    color: "#ff6584"
+  }
 ];
 
 /* ─────────────────────────────────────
