@@ -261,13 +261,13 @@ var TOOLS_DATA = [
     descLong: "Extract every page of your PDF and save them as individual high-resolution JPG images directly in your browser. No signup, no server uploads.",
     link: "/pdf-to-jpg.html",
     cat: "pdf",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>`,
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>',
     emoji: "🖼️",
     badge: "new",
     color: "#3b82f6",
     status: "active"
-   },
-   {
+  },
+  {
     id: 20,
     title: "Free PDF Unlocker",
     desc: "Remove password protection from PDF files instantly.",
