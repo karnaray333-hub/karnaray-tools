@@ -30,7 +30,7 @@
     '      </button>',
     '      <div class="dropdown-menu">',
     '        <a class="dm-item" href="/how-to-unlock-pdf-online.html"><span class="dm-icon">🔓</span>Unlock PDF Guide</a>',
-    '        <a class="dm-item" href="/blog-pdf-merger.html"><span class="dm-icon">📄</span>Merge PDF Guide</a>',
+    '        <a class="dm-item" href="/how-to-merge-pdf-files-online.html"><span class="dm-icon">📄</span>Merge PDF Guide</a>',
     '        <div class="dm-divider"></div>',
     '        <a class="dm-all" href="/tools-hub.html">View All Guides &nbsp;&#8594;</a>',
     '      </div>',
@@ -52,7 +52,7 @@
     '  <a class="nl" href="/tools-hub.html">&#128736;&#65039; Tools Hub</a>',
     '  <div class="mm-label">📚 Guides & Articles</div>',
     '  <a class="dm-item" href="/how-to-unlock-pdf-online.html"><span class="dm-icon">🔓</span>Unlock PDF Guide</a>',
-    '  <a class="dm-item" href="/blog-pdf-merger.html"><span class="dm-icon">📄</span>Merge PDF Guide</a>',
+    '  <a class="dm-item" href="/how-to-merge-pdf-files-online.html"><span class="dm-icon">📄</span>Merge PDF Guide</a>',
     '  <a class="nl" href="/contact.html">&#9993;&#65039; Contact</a>',
     '  <a class="nl" href="/privacy.html">&#128274; Privacy</a>',
     '</div>'
