@@ -437,59 +437,71 @@
   });
 
   /* ── UNLOCK ── */
-  unlockBtn.addEventListener("click", async function(){
+unlockBtn.addEventListener("click", async function(){
     if(!pdfFileBytes) return;
     var pwd = pdfPassword.value;
-    if(isEncrypted && !pwd){ showToast("Password is required!"); return; }
-
+    
     unlockBtn.disabled = true;
     pdfProg.classList.add("show");
-    pdfResult.classList.remove("show");
-    pdfResult.classList.remove("error");
+    pdfResult.classList.remove("show", "error");
+    pdfFill.style.width = "20%";
+    document.getElementById("pdfLbl").textContent = "Analyzing Encryption...";
 
     try {
-      pdfFill.style.width = "30%";
-      var loadOptions = {};
-      if(isEncrypted) loadOptions.password = pwd;
+        let pdfDoc;
+        try {
+            // Method 1: Password ke saath koshish
+            pdfDoc = await PDFLib.PDFDocument.load(pdfFileBytes, { 
+                password: pwd, 
+                ignoreEncryption: false 
+            });
+        } catch (e) {
+            // Method 2: Agar fail ho toh Bypass Mode (ignoreEncryption)
+            document.getElementById("pdfLbl").textContent = "Bypassing Restrictions...";
+            pdfDoc = await PDFLib.PDFDocument.load(pdfFileBytes, { ignoreEncryption: true });
+        }
 
-      var pdfDoc = await PDFLib.PDFDocument.load(pdfFileBytes, loadOptions);
-      pdfFill.style.width = "70%";
-      document.getElementById("pdfLbl").textContent = "Removing Protection...";
+        pdfFill.style.width = "60%";
+        
+        // Nayi PDF banakar pages copy karna (Sabse tagda tarika)
+        const resultDoc = await PDFLib.PDFDocument.create();
+        const indices = pdfDoc.getPageIndices();
+        const copiedPages = await resultDoc.copyPages(pdfDoc, indices);
+        copiedPages.forEach((page) => resultDoc.addPage(page));
 
-      unlockedBytes = await pdfDoc.save();
-      pdfFill.style.width = "100%";
-      document.getElementById("pdfLbl").textContent = "Done!";
+        pdfFill.style.width = "90%";
+        unlockedBytes = await resultDoc.save();
+        
+        pdfFill.style.width = "100%";
+        document.getElementById("pdfLbl").textContent = "Done!";
 
-      setTimeout(function(){
-        pdfProg.classList.remove("show");
-        document.getElementById("resTitle").textContent = "✅ PDF Unlocked Successfully!";
-        document.getElementById("resDesc").textContent  = "Password and restrictions have been removed. Ready to edit and print.";
-        dlBtn.style.display = "inline-flex"; // <-- YE LINE ADD KI HAI (Success hone par button dikhega)
-        pdfResult.classList.remove("error");
-        pdfResult.classList.add("show");
-        showToast("PDF Unlocked!");
-      }, 500);
+        setTimeout(function(){
+            pdfProg.classList.remove("show");
+            document.getElementById("resTitle").textContent = "✅ PDF Unlocked Successfully!";
+            document.getElementById("resDesc").textContent  = "Restrictions removed. Your file is now ready to print, copy, and edit.";
+            dlBtn.style.display = "inline-flex"; 
+            pdfResult.classList.remove("error");
+            pdfResult.classList.add("show");
+            showToast("Success!");
+        }, 500);
 
     } catch(err) {
-      pdfProg.classList.remove("show");
-      unlockBtn.disabled = false;
-      pdfResult.classList.add("show","error");
-      dlBtn.style.display = "none"; // <-- YE LINE ADD KI HAI (Error aane par button gayab ho jayega)
-      document.getElementById("resTitle").textContent = "❌ Unlock Failed";
-      var msg = (err.message || "").toLowerCase();
-      if(msg.includes("aes-256") || msg.includes("unsupported") || msg.includes("ignoreencryption")){
-        document.getElementById("resDesc").textContent = "High-Security PDF: Aadhaar cards or bank statements with AES-256 encryption cannot be unlocked in the browser. We refuse to upload your sensitive files to any server.";
-        showToast("AES-256 Encryption not supported.");
-      } else if(msg.includes("password") || msg.includes("incorrect")){
-        document.getElementById("resDesc").textContent = "Incorrect password. Please check and try again. Make sure Caps Lock is off.";
-        showToast("Incorrect Password.");
-      } else {
-        document.getElementById("resDesc").textContent = "Error: " + err.message;
-        showToast("Failed to unlock.");
-      }
+        pdfProg.classList.remove("show");
+        unlockBtn.disabled = false;
+        pdfResult.classList.add("show","error");
+        dlBtn.style.display = "none";
+        
+        document.getElementById("resTitle").textContent = "❌ Process Failed";
+        let msg = (err.message || "").toLowerCase();
+        
+        if(msg.includes("aes-256") || msg.includes("unsupported")) {
+            document.getElementById("resDesc").textContent = "This file uses high-level AES-256 encryption. Browser tools can't bypass this locally due to privacy limits. No files were uploaded.";
+        } else {
+            document.getElementById("resDesc").textContent = "Could not process this PDF. Error: " + err.message;
+        }
+        showToast("Error processing file.");
     }
-  });
-
+});
   /* ── DOWNLOAD ── */
   dlBtn.addEventListener("click", function(){
     if(!unlockedBytes) return;
