@@ -32,13 +32,13 @@
     '          <a class="dm-item" href="/pdf-unlock.html"><span class="dm-icon">🔓</span>Unlock PDF</a>',
     '          <a class="dm-item" href="/pdf-splitter.html"><span class="dm-icon">✂️</span>Split PDF</a>',
     '          <a class="dm-item" href="/pdf-to-jpg.html"><span class="dm-icon">🖼️</span>PDF to JPG</a>',
-    '         <a class="dm-item" href="/percentage-calculator.html"><span class="dm-icon">%</span>Percentage Calculator</a>',
+    '          <a class="dm-item" href="/percentage-calculator.html"><span class="dm-icon">%</span>Percentage Calculator</a>',
     '        </div>',
     '        <div class="menu-col">',
-    '          <span class="dm-section-label">📚 Expert Guides</span>' +
-    '          <a class="dm-item" href="/how-to-merge-pdf-online.html"><span class="dm-icon">📄</span>Merge PDF Guide</a>' +
-    '          <a class="dm-item" href="/how-to-unlock-pdf-online.html"><span class="dm-icon">🔓</span>Unlock PDF Guide</a>' +
-    '          <a class="dm-item" href="/blog-percentage-calculator.html"><span class="dm-icon">🔢</span>Percentage Guide</a>'
+    '          <span class="dm-section-label">📚 Expert Guides</span>',
+    '          <a class="dm-item" href="/how-to-merge-pdf-online.html"><span class="dm-icon">📄</span>Merge PDF Guide</a>',
+    '          <a class="dm-item" href="/how-to-unlock-pdf-online.html"><span class="dm-icon">🔓</span>Unlock PDF Guide</a>',
+    '          <a class="dm-item" href="/blog-percentage-calculator.html"><span class="dm-icon">🔢</span>Percentage Guide</a>',
     '          <div class="dm-divider"></div>',
     '          <a class="dm-all" href="/tools-hub.html">View All Guides &nbsp;&#8594;</a>',
     '        </div>',
@@ -61,7 +61,7 @@
     '  <a class="nl" href="/tools-hub.html">&#128736;&#65039; Tools Hub</a>',
     '  ',
     '  <div class="mobile-accordion">',
-    '  <div class="accordion-header" onclick="toggleAcc(this)">🛠️ POPULAR TOOLS <span class="acc-arrow">▼</span></div>',
+    '    <div class="accordion-header" onclick="toggleAcc(this)">🛠️ POPULAR TOOLS <span class="acc-arrow">▼</span></div>',
     '    <div class="accordion-content">',
     '      <a class="dm-item" href="/pdf-merger.html"><span class="dm-icon">📄</span>Merge PDF</a>',
     '      <a class="dm-item" href="/pdf-splitter.html"><span class="dm-icon">✂️</span>Split PDF</a>',
@@ -72,10 +72,12 @@
     '    </div>',
     '  </div>',
     '  ',
-    '      <div class="accordion-content">' +
-    '      <a class="dm-item" href="/how-to-merge-pdf-online.html"><span class="dm-icon">📄</span>How to Merge PDF</a>' +
-    '      <a class="dm-item" href="/how-to-unlock-pdf-online.html"><span class="dm-icon">🔓</span>How to Unlock PDF</a>' +
-    '      <a class="dm-item" href="/blog-percentage-calculator.html"><span class="dm-icon">📊</span>Percentage Guide</a>' +
+    '  <div class="mobile-accordion">',
+    '    <div class="accordion-header" onclick="toggleAcc(this)">📚 EXPERT GUIDES <span class="acc-arrow">▼</span></div>',
+    '    <div class="accordion-content">',
+    '      <a class="dm-item" href="/how-to-merge-pdf-online.html"><span class="dm-icon">📄</span>Merge PDF Guide</a>',
+    '      <a class="dm-item" href="/how-to-unlock-pdf-online.html"><span class="dm-icon">🔓</span>Unlock PDF Guide</a>',
+    '      <a class="dm-item" href="/blog-percentage-calculator.html"><span class="dm-icon">📊</span>Percentage Guide</a>',
     '    </div>',
     '  </div>',
     '  ',
@@ -197,7 +199,6 @@
       mobileMenu.classList.toggle("open");
       hamburger.classList.toggle("open");
     });
-    // Removed auto-close for all links so accordion works smoothly
   }
 
 })();
